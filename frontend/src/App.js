@@ -33,6 +33,9 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
+          <Route path="/">
+            <h2>Page Not Found</h2>
+          </Route>
         </Switch>
       )}
     </>
