@@ -16,13 +16,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/RoodeAwakening/sirHiss_Crypto">
-    <img src="frontend/public/images/logo_transparent.png" alt="Logo" width="" height="">
+    <img src="frontend/public/images/logo.jpg" alt="Logo" width="" height="">
   </a>
 
   <h3 align="center">Sir Hiss Crypto </h3>
 
   <p align="center">
-    Sir Hiss is a crypto trading website designed around the popular web app "Robinhood". Users can sign up for an account, track all of their trades and keep track of account holdings for all of their crypto. This app also supports the tracking of multiple exchanges and wallets.
+    Sir Hiss is a crypto trading website designed around the popular web app "Robinhood". Users can sign up for an account, track all of their trades and keep track of account holdings for all of their crypto. 
     <br />
     <a href="https://github.com/RoodeAwakening/sirHiss_Crypto"><strong>Explore the docs »</strong></a>
     <br />
@@ -83,6 +83,7 @@
 * [Redux]()
 * [HTML]()
 * [CSS]()
+* [SEQUELIZE]()
 
 
 
@@ -133,7 +134,7 @@ Here is everything we need you to do to get started with Sir Hiss.
 ![Dashboard](####)
 ### Find out where your holdings are located at the click of a button.
 ![Holdings](####)
-### Easily track transactions between all of your accounts.
+### Easily track transactions.
 ![Transactions](####)
 ### Easy to update and configure watchlists.
 ![Watchlist](####)
