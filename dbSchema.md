@@ -59,4 +59,4 @@
 
 
 <br></br>
-<img src="frontend/public/images/db_schema.PNG" alt="Logo" width="" height="">
+<img src="frontend/public/images/db_schema.PNG" alt="Schema" width="" height="">
