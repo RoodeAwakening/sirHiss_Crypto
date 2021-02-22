@@ -1,5 +1,5 @@
 import "./SplashPage.css";
-import splashVideo from "../../images/splashSignupVideo.png";
+import splashImage from "../../images/splash_brand-picture.png";
 
 function SplashPage() {
   return (
@@ -18,7 +18,14 @@ function SplashPage() {
       </div>
       <div className="splash_signup-video">
         <div className="splash_signup-video-container">
-          <img src={splashVideo} />
+      
+        <video id='splash_brand-video'
+          src="https://cdn.robinhood.com/assets/robinhood/brand/_next/static/images/3x__327bf4cc768a323497d5aaa7416319c2.mp4"
+          autoPlay
+          loop
+          muted
+        />
+          <img id='splash_brand-image' src={splashImage} />
         </div>
       </div>
       <div className="splash_trading-video">

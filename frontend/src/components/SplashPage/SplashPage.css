@@ -27,12 +27,24 @@
   visibility: visible;
 }
 
+#splash_brand-image{
+  width: 535.97px;
+  height: 464.98px;
+  position: relative;
+}
+
 .splash_signup-video {
   grid-area: splash_signup-video;
   background-color: #c3f53c;
- 
+  }
 
-  
+
+#splash_brand-video{
+  width: 535.97px;
+  height: 464.98px;
+  position: absolute;
+  top: 5;
+  left: 20;
 }
 
 .splash_signup-video-container {
