@@ -18,35 +18,57 @@ function SplashPage() {
       </div>
       <div className="splash_signup-video">
         <div className="splash_signup-video-container">
-      
-        <video id='splash_brand-video'
-          src="https://cdn.robinhood.com/assets/robinhood/brand/_next/static/images/3x__327bf4cc768a323497d5aaa7416319c2.mp4"
-          autoPlay
-          loop
-          muted
-        />
-          <img id='splash_brand-image' src={splashImage} />
+          <video
+            src="https://icecube-us-843.icedrive.io/download?p=2ENabJPIHuzUAo2ezg6LztZE6i9XLSxN9VXscDzLzxZz7kxs5GlwfpABlQjIeNsgpG31SQUkTPMakGUstoTErM.Zz_r0ep5X2spo.u8LDN2WGlNrELYkPlDygcpK4KnJpopPenS0T8BoiITxE5Da4BZSARMb0kaVIU7W2eXiSUwa49p75OwUJQi1Kd.f2uTHr9yKShu11hCoxUdLaWhGow--"
+            autoPlay
+            loop
+            muted
+          />
         </div>
       </div>
-      <div className="splash_trading-video">
-        trading video
+      <div className="splash_trading-video-container">
         <video
+          id="splash_trading-video"
           src="https://cdn.robinhood.com/assets/superbowl/superbowl.mp4"
           autoPlay
           loop
           muted
         />
       </div>
-      <div className="splash_trading-blurb">trading blurb</div>
+      <div className="splash_trading-blurb">
+        <h1>We are all investors.</h1>
+
+        <h3>So are you.</h3>
+      </div>
       <div className="splash_fractional-shares-header">
-        fractional shares header
+        Introducing Fractional Shares
       </div>
       <div className="splash_fractional-shares-image">
         fractional shares image
       </div>
-      <div className="splash_fractional-shares-info-1">fr share info 1</div>
-      <div className="splash_fractional-shares-info-2">fr share info 2</div>
-      <div className="splash_fractional-shares-info-3">fr share info 3</div>
+
+      <div className="splash_fractional-shares-info-1">
+        <h1>Invest Any Amount</h1>
+        <h2>
+          Choose how much you want to invest, and we’ll convert from dollars to
+          parts of a whole share.
+        </h2>
+      </div>
+      <div className="splash_fractional-shares-info-2">
+        <h1>Build a Balanced Portfolio</h1>
+        <h2>
+          Customize your portfolio with pieces of different companies and funds
+          to help reduce risk.
+        </h2>
+      </div>
+      <div className="splash_fractional-shares-info-3">
+        <h1>Trade in Real Time</h1>
+        <h2>
+          Trades placed during market hours are executed at that time, so you’ll
+          always know the share price.
+        </h2>
+      </div>
+
       <div className="splash_manage-video">manage video</div>
       <div className="splash_manage-blurb">manage blurb</div>
       <div className="splash_footer-1">footer 1</div>

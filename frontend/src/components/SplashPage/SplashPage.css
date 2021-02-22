@@ -1,11 +1,11 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "splash_signup-info splash_signup-info splash_signup-video splash_signup-video"
-    "splash_trading-video splash_trading-video splash_trading-video splash_trading-blurb"
+    "splash_trading-video splash_trading-video splash_trading-blurb splash_trading-blurb"
     "splash_fractional-shares-header splash_fractional-shares-header splash_fractional-shares-header splash_fractional-shares-image"
     "splash_fractional-shares-info-1 splash_fractional-shares-info-2 splash_fractional-shares-info-3 splash_fractional-shares-image"
     "splash_manage-video splash_manage-video splash_manage-blurb splash_manage-blurb"
@@ -15,71 +15,112 @@
 .splash_signup-info {
   grid-area: splash_signup-info;
   background-color: #c3f53c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .splash_signup-info-container {
   background-color: #c3f53c;
   margin-left: 75px;
-  padding: 100px 0;
+  padding: 155px 0;
   margin-right: 9px;
   width: 492px;
   display: block;
   visibility: visible;
-}
-
-#splash_brand-image{
-  width: 535.97px;
-  height: 464.98px;
-  position: relative;
-}
-
-.splash_signup-video {
-  grid-area: splash_signup-video;
-  background-color: #c3f53c;
-  }
-
-
-#splash_brand-video{
-  width: 535.97px;
-  height: 464.98px;
-  position: absolute;
-  top: 5;
-  left: 20;
 }
 
 .splash_signup-video-container {
   background-color: #c3f53c;
   margin-right: 75px;
   padding: 100px 0;
-  margin-right: 9px;
-  width: 492px;
-  display: block;
   visibility: visible;
 }
 
+.splash_signup-video {
+  grid-area: splash_signup-video;
+  background-color: #c3f53c;
+}
 
-.splash_trading-video {
+.splash_trading-video-container {
   grid-area: splash_trading-video;
+}
+
+#splash_trading-video {
+  display: inline-block;
+  max-width: 791px;
 }
 
 .splash_trading-blurb {
   grid-area: splash_trading-blurb;
+  padding: 142px;
 }
 
+.splash_trading-blurb h1 {
+  font-family: "Capsule Sans Display", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60px;
+}
+.splash_trading-blurb h3 {
+  font-family: "Capsule Sans Text", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.splash_fractional-shares-header{
+  grid-area: splash_fractional-shares-header;
+  height: 250px;
+}
 .splash_fractional-shares-image {
   grid-area: splash_fractional-shares-image;
+  height: 250px;
+}
+
+.splash_fractional-shares-info-1
+  .splash_fractional-shares-info-2
+  .splash_fractional-shares-info-3
+  h1 {
+  font-family: "Capsule Sans Text", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.25px;
+}
+
+.splash_fractional-shares-info-1
+  .splash_fractional-shares-info-2
+  .splash_fractional-shares-info-3
+  h2 {
+  font-family: "Capsule Sans Text", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: -0.25px;
 }
 
 .splash_fractional-shares-info-1 {
   grid-area: splash_fractional-shares-info-1;
+  text-align: center;
 }
 
 .splash_fractional-shares-info-2 {
   grid-area: splash_fractional-shares-info-2;
+  text-align: center;
 }
 
 .splash_fractional-shares-info-3 {
   grid-area: splash_fractional-shares-info-3;
+  text-align: center;
 }
 
 .splash_manage-video {
