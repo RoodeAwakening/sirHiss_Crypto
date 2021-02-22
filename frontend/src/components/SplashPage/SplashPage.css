@@ -1,111 +1,190 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "splash_signup-info splash_signup-info splash_signup-video splash_signup-video"
-    "splash_trading-video splash_trading-video splash_trading-video splash_trading-blurb"
-    "splash_fractional-shares-header splash_fractional-shares-header splash_fractional-shares-header splash_fractional-shares-image"
-    "splash_fractional-shares-info-1 splash_fractional-shares-info-2 splash_fractional-shares-info-3 splash_fractional-shares-image"
-    "splash_manage-video splash_manage-video splash_manage-blurb splash_manage-blurb"
-    "splash_footer-1 splash_footer-2 splash_footer-3 splash_footer-4";
+
+
+.splash_wrapper button h1{
+font-family: "Capsule Sans Text",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px;
 }
 
-.splash_signup-info {
-  grid-area: splash_signup-info;
-  background-color: #c3f53c;
+.splash_wrapper button{
+  
+  color: white;
+  text-decoration: none;
+  -webkit-box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  position: static;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0px 36px;
+  height: 48px;
+  min-width: 144px;
+  border-radius: 24px;
+  background-color: rgb(0, 0, 0);
+}
+
+.splash_signup {
+  display: flex;
 }
 
 .splash_signup-info-container {
-  background-color: #c3f53c;
-  margin-left: 75px;
-  padding: 100px 0;
-  margin-right: 9px;
-  width: 492px;
-  display: block;
-  visibility: visible;
+  background-color: #9faf71;
+  width: 50%;
 }
 
-#splash_brand-image{
-  width: 535.97px;
-  height: 464.98px;
-  position: relative;
+.splash_signup-info {
+
+  background-color: #c3f53c;
+}
+
+.splash_signup-video-container {
+  background-color: #bec9a2;
+  width: 50%;
 }
 
 .splash_signup-video {
   grid-area: splash_signup-video;
   background-color: #c3f53c;
-  }
-
-
-#splash_brand-video{
-  width: 535.97px;
-  height: 464.98px;
-  position: absolute;
-  top: 5;
-  left: 20;
 }
 
-.splash_signup-video-container {
-  background-color: #c3f53c;
-  margin-right: 75px;
-  padding: 100px 0;
-  margin-right: 9px;
-  width: 492px;
-  display: block;
-  visibility: visible;
+.splash_middle-1 {
+  display: flex;
+}
+
+.splash_middle-1_trading-video-container {
+  display: flex;
+}
+
+#splash_trading-video {
+  max-width: 791px;
 }
 
 
-.splash_trading-video {
-  grid-area: splash_trading-video;
+
+.splash_middle-2 {
+  display: flex;
 }
 
-.splash_trading-blurb {
-  grid-area: splash_trading-blurb;
+
+.splash_middle-2_trading-blurb-container-left {
 }
 
-.splash_fractional-shares-image {
-  grid-area: splash_fractional-shares-image;
+
+.splash_middle-2_trading-blurb-container-left-points {
+  display: flex;
+  
 }
 
-.splash_fractional-shares-info-1 {
-  grid-area: splash_fractional-shares-info-1;
+#fractional{
+      font-family: "Capsule Sans Display",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: -0.25px
 }
 
-.splash_fractional-shares-info-2 {
-  grid-area: splash_fractional-shares-info-2;
+#fractional-sub{
+  font-family: "Capsule Sans Text",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: -0.25px
 }
 
-.splash_fractional-shares-info-3 {
-  grid-area: splash_fractional-shares-info-3;
+.splash_middle-2_trading-blurb-container-left-blurb h1{
+  font-family: "Capsule Sans Text",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.25px
+  
 }
 
-.splash_manage-video {
-  grid-area: splash_manage-video;
+
+.splash_middle-2_trading-blurb-container-left-blurb h2{
+  font-family: "Capsule Sans Text",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: -0.25px
+  
 }
 
-.splash_manage-blurb {
-  grid-area: splash_manage-blurb;
+.splash_middle-2_trading-blurb-container-right {
+
 }
 
-.splash_fractional-shares-header {
-  grid-area: splash_fractional-shares-header;
+
+.splash_middle-3{
+  background-color: black;
+  color: white;
+  display: flex;
+}
+.splash_middle-3 h1{
+font-family: "Capsule Sans Display", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+font-size: 52px;
+font-style: normal;
+font-weight: 500;
+line-height: 60px;
+letter-spacing: -1.75px;
+text-decoration: unset;
+letter-spacing: -0.25px;
+color:white;
 }
 
-.splash_footer-1 {
-  grid-area: splash_footer-1;
+.splash_middle-3 h2{
+  font-family: "Capsule Sans Text",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: -0.25px;
+  color: white;
 }
 
-.splash_footer-2 {
-  grid-area: splash_footer-2;
+.splash_middle-3-container{
+  display: flex;
 }
 
-.splash_footer-3 {
-  grid-area: splash_footer-3;
+.splash_middle-4{
+text-align: center;
 }
 
-.splash_footer-4 {
-  grid-area: splash_footer-4;
+.splash_middle-4 h1{
+  font-family: "Capsule Sans Display",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.25px;
+}
+
+.splash_middle-4 h2{
+  font-family: "Capsule Sans Text",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: -0.25px;
+}
+
+
+
+.splash_middle-5{
+  
+}
+
+.splash_middle-6{
+  
 }
