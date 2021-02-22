@@ -1,0 +1,99 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "splash_signup-info splash_signup-info splash_signup-video splash_signup-video"
+    "splash_trading-video splash_trading-video splash_trading-video splash_trading-blurb"
+    "splash_fractional-shares-header splash_fractional-shares-header splash_fractional-shares-header splash_fractional-shares-image"
+    "splash_fractional-shares-info-1 splash_fractional-shares-info-2 splash_fractional-shares-info-3 splash_fractional-shares-image"
+    "splash_manage-video splash_manage-video splash_manage-blurb splash_manage-blurb"
+    "splash_footer-1 splash_footer-2 splash_footer-3 splash_footer-4";
+}
+
+.splash_signup-info {
+  grid-area: splash_signup-info;
+  background-color: #c3f53c;
+}
+
+.splash_signup-info-container {
+  background-color: #c3f53c;
+  margin-left: 75px;
+  padding: 100px 0;
+  margin-right: 9px;
+  width: 492px;
+  display: block;
+  visibility: visible;
+}
+
+.splash_signup-video {
+  grid-area: splash_signup-video;
+  background-color: #c3f53c;
+ 
+
+  
+}
+
+.splash_signup-video-container {
+  background-color: #c3f53c;
+  margin-right: 75px;
+  padding: 100px 0;
+  margin-right: 9px;
+  width: 492px;
+  display: block;
+  visibility: visible;
+}
+
+
+.splash_trading-video {
+  grid-area: splash_trading-video;
+}
+
+.splash_trading-blurb {
+  grid-area: splash_trading-blurb;
+}
+
+.splash_fractional-shares-image {
+  grid-area: splash_fractional-shares-image;
+}
+
+.splash_fractional-shares-info-1 {
+  grid-area: splash_fractional-shares-info-1;
+}
+
+.splash_fractional-shares-info-2 {
+  grid-area: splash_fractional-shares-info-2;
+}
+
+.splash_fractional-shares-info-3 {
+  grid-area: splash_fractional-shares-info-3;
+}
+
+.splash_manage-video {
+  grid-area: splash_manage-video;
+}
+
+.splash_manage-blurb {
+  grid-area: splash_manage-blurb;
+}
+
+.splash_fractional-shares-header {
+  grid-area: splash_fractional-shares-header;
+}
+
+.splash_footer-1 {
+  grid-area: splash_footer-1;
+}
+
+.splash_footer-2 {
+  grid-area: splash_footer-2;
+}
+
+.splash_footer-3 {
+  grid-area: splash_footer-3;
+}
+
+.splash_footer-4 {
+  grid-area: splash_footer-4;
+}

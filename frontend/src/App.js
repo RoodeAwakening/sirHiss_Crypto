@@ -5,7 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
-import HomePage from "./components/HomePage"
+import SplashPage from "./components/SplashPage"
 
 import * as sessionActions from "./store/session";
 
@@ -25,7 +25,7 @@ function App() {
       {isLoaded && (
         <Switch>
           <Route path="/" exact>
-            <HomePage />
+            <SplashPage />
           </Route>
           <Route path="/login">
             <LoginFormPage />
