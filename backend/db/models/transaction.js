@@ -1,52 +1,25 @@
 'use strict';
 
-const user = require("./user");
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    /*
+      Add altering commands here.
+      Return a promise to correctly handle asynchronicity.
 
-module.exports = (sequelize, DataTypes) => {
-  const Transaction = sequelize.define('Transaction', {
-    id: {
-      allowNull: false,
-      autoIncrement: true,
-      primaryKey: true,
-      type: DataTypes.INTEGER
-    },
-    user_id: {
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      references: { model: "Users" }
-    },
-    listAssets_id: {
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      references: { model: "ListAssets" }
-    },
-    portfolioHoldings_id: {
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      references: { model: "PortfolioHoldings" }
-    },
-    price: {
-      allowNull: false,
-      type: DataTypes.INTEGER
-    },
-    coinCount: {
-      allowNull: false,
-      type: DataTypes.INTEGER
-    },
-    transactionType: {
-      allowNull: false,
-      type: DataTypes.STRING
-    }
-  }, {});
-  Transaction.associate = function(models) {
-    
-    // transaction belongs to user
-    Transaction.belongsTo(models.User,{foreignKey:user_id})
-    // transaction has one list asset
-    Transaction.hasOne(models.ListAsset,{foreignKey:listAssets_id})
-    // transaction belongs to portfolioHolding 
-    Transaction.belongsTo(models.PortfolioHolding,{foreignKey:portfolioHoldings_id})
+      Example:
+      */
+      return queryInterface.bulkInsert('Transactions', [
+        {user_id:1,portfolioHoldings_id:1,price:1.00,coinCount:1,transactionType:'buy'}
+      ], {});
+  },
 
-  };
-  return Transaction;
+  down: (queryInterface, Sequelize) => {
+    /*
+      Add reverting commands here.
+      Return a promise to correctly handle asynchronicity.
+
+      Example:
+      */
+      return queryInterface.bulkDelete('Transactions', null, {});
+  }
 };

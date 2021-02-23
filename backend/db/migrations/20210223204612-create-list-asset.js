@@ -1,4 +1,3 @@
-
 "use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -8,11 +7,6 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
-      },
-      watchLists_id: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: { model: "WatchLists" },
       },
       coinCode: {
         allowNull: false,
@@ -32,10 +26,12 @@ module.exports = {
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
       },
     });
   },

@@ -7,11 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    watchLists_id: {
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      references: { model: "Watchlists" },
-    },
+    
     coinCode: {
       allowNull: false,
       type: DataTypes.STRING
@@ -30,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   ListAsset.associate = function(models) {
     //list asset belongs to a watchlists
-    ListAsset.belongsTo(models.WatchList,{foreignKey:watchLists_id})
+    ListAsset.belongsTo(models.WatchList,{foreignKey:listAssets_id})
     //list asset belongs to many transactions
     ListAsset.belongsTo(models.Transaction,{foreignKey:listAssets_id})
     //list asset belongs to a portfolioAssets

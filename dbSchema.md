@@ -14,25 +14,25 @@
 
 # `Watchlists`
 
-| Column Name | Data Type | Details               | Description                        |
-| ----------- | --------- | --------------------- | ---------------------------------- |
-| `id`        | integer   | not null, primary key | Watchlists unique id               |
-| `user_id`   | integer   | not null, foreign key | User that the watchlist belongs to |
-| `createdAt` | datetime  | not null              | timestamp                          |
-| `updatedAt` | datetime  | not null              | timestamp                          |
+| Column Name     | Data Type | Details               | Description                              |
+| --------------- | --------- | --------------------- | ---------------------------------------- |
+| `id`            | integer   | not null, primary key | Watchlists unique id                     |
+| `user_id`       | integer   | not null, foreign key | User that the watchlist belongs to       |
+| `listAssets_id` | integer   | not null, foreign key | Coin that belongs to the users watchlist |
+| `createdAt`     | datetime  | not null              | timestamp                                |
+| `updatedAt`     | datetime  | not null              | timestamp                                |
 
 # `ListAssets`
 
-| Column Name        | Data Type | Details               | Description                              |
-| ------------------ | --------- | --------------------- | ---------------------------------------- |
-| `id`               | integer   | not null, primary key | ListAssets unique id                     |
-| `watchLists_id`    | integer   | not null, foreign key | Coin that belongs to the users watchlist |
-| `coinCode`         | string    | not null              | Coin code of the asset                   |
-| `coinName`         | string    | not null              | Coin name of the asset                   |
-| `coinLogo`         | string    | not null              | Coin logo of the asset                   |
-| `coinCurrentPrice` | integer   | not null              | Current price of coin                    |
-| `createdAt`        | datetime  | not null              | timestamp                                |
-| `updatedAt`        | datetime  | not null              | timestamp                                |
+| Column Name        | Data Type | Details               | Description            |
+| ------------------ | --------- | --------------------- | ---------------------- |
+| `id`               | integer   | not null, primary key | ListAssets unique id   |
+| `coinCode`         | string    | not null              | Coin code of the asset |
+| `coinName`         | string    | not null              | Coin name of the asset |
+| `coinLogo`         | string    | not null              | Coin logo of the asset |
+| `coinCurrentPrice` | integer   | not null              | Current price of coin  |
+| `createdAt`        | datetime  | not null              | timestamp              |
+| `updatedAt`        | datetime  | not null              | timestamp              |
 
 # `Transactions`
 

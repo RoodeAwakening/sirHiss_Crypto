@@ -14,7 +14,12 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.INTEGER,
       references: {model:"Users"}
-    }    
+    },
+    listAssets_id: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      references: { model: "listAssets" },
+    },    
   }, {});
   Watchlist.associate = function(models) {
     
@@ -22,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     WatchList.belongsTo(models.User,{foreignKey:user_id})
     
     // watchlist has many list listAssets
-    WatchList.hasMany(models.ListAsset,{foreignKey:watchLists_id})
+    //WatchList.hasMany(models.ListAsset,{foreignKey:listAssets_id})
 
   };
   return Watchlist;

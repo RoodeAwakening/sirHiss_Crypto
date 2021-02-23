@@ -1,38 +1,36 @@
-'use strict';
+"use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('PortfolioHoldings', {
+    return queryInterface.createTable("WatchLists", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       user_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: "Users" }
+        references: { model: "Users" },
       },
       listAssets_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: "ListAssets" }
-      },
-      coinCount: {
-        allowNull: false,
-        type: Sequelize.INTEGER
+        references: { model: "ListAssets" },
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now')
+      },
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('PortfolioHoldings');
-  }
+    return queryInterface.dropTable("WatchLists");
+  },
 };
