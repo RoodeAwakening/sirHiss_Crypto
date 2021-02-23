@@ -2,6 +2,7 @@
 const { Validator } = require("sequelize");
 const bcrypt = require("bcryptjs");
 
+
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     "User",
@@ -64,7 +65,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
   User.associate = function (models) {
-    // associations can be defined here
+
+    //user has many transations 
+    User.hasMany(models.Transaction,{foreignKey:user_id})
+    //user has many portfolioholding
+    User.hasMany(models.PortfolioHolding,{foreignKey:user_id})
+    //user has one watchlist
+    User.hasMany(models.WatchList,{foreignKey:user_id})
+
   };
 
   //will return an object with the User instance information that is safe to save to a JWT
