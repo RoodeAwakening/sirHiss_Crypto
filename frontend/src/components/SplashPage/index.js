@@ -1,3 +1,7 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import "./SplashPage.css";
 import splashImage from "../../images/splash_brand-picture.png";
 import splashShapes from "../../images/splash_shapes.jpg";
@@ -17,13 +21,14 @@ function SplashPage() {
               money in motion. Sign up and get your first coin for free. Certain
               limitations apply.
             </h3>
-            <button><h1>Sign Up</h1></button>
+            <button><NavLink to="/signup"><h1>Sign Up</h1></NavLink></button>
           </div>
         </div>
         <div className="splash_signup-video-container">
           <div className="splash_signup-video">
+            <img src={splashImage}/>
             <video
-              src="https://icecube-us-843.icedrive.io/download?p=2ENabJPIHuzUAo2ezg6LztZE6i9XLSxN9VXscDzLzxZz7kxs5GlwfpABlQjIeNsgpG31SQUkTPMakGUstoTErM.Zz_r0ep5X2spo.u8LDN2WGlNrELYkPlDygcpK4KnJpopPenS0T8BoiITxE5Da4BZSARMb0kaVIU7W2eXiSUwa49p75OwUJQi1Kd.f2uTHr9yKShu11hCoxUdLaWhGow--"
+              src="https://snowball-02.icedrive.io/?p=Am4cDCzceRLLmklX86HJzleQ9CXAj9yImLI_RzC3tCQLJYKbUOBedb.UqvazH45Izypd9HpFbmN2NKFSFcbmPuoGrvGunCQV3jEUlxiutR2HJOn6IKCWj7CLtH6xR8YPzlvtTbQ211U75Ml3Mza70A--&w=256&h=256&m=middle"
               autoPlay
               loop
               muted
@@ -105,7 +110,8 @@ function SplashPage() {
           <h1>Our Products</h1>
           <img src={splashCryptoPhone}/>
           <h2>Tap into the cryptocurrency market to buy, hold, and sell Bitcoin, Ethereum, Dogecoin, and more, 24/7 with SirHiss Crypto.</h2>
-          <button><h1>Sign Up</h1></button>
+          
+          <button><NavLink to="/signup"><h1>Sign Up</h1></NavLink></button>
         </div>
       </div>
       <div className="splash_middle-5"></div>
@@ -113,42 +119,6 @@ function SplashPage() {
 
     </div>
 
-    //   <div className="splash_fractional-shares-header">
-    //     Introducing Fractional Shares
-    //   </div>
-    //   <div className="splash_fractional-shares-image">
-    //     fractional shares image
-    //   </div>
-
-    //   <div className="splash_fractional-shares-info-1">
-    //     <h1>Invest Any Amount</h1>
-    //     <h2>
-    //       Choose how much you want to invest, and we’ll convert from dollars to
-    //       parts of a whole share.
-    //     </h2>
-    //   </div>
-    //   <div className="splash_fractional-shares-info-2">
-    //     <h1>Build a Balanced Portfolio</h1>
-    //     <h2>
-    //       Customize your portfolio with pieces of different companies and funds
-    //       to help reduce risk.
-    //     </h2>
-    //   </div>
-    //   <div className="splash_fractional-shares-info-3">
-    //     <h1>Trade in Real Time</h1>
-    //     <h2>
-    //       Trades placed during market hours are executed at that time, so you’ll
-    //       always know the share price.
-    //     </h2>
-    //   </div>
-
-    //   <div className="splash_manage-video">manage video</div>
-    //   <div className="splash_manage-blurb">manage blurb</div>
-    //   <div className="splash_footer-1">footer 1</div>
-    //   <div className="splash_footer-2">footer 2</div>
-    //   <div className="splash_footer-3">footer 3</div>
-    //   <div className="splash_footer-4">footer 4</div>
-    // </div>
   );
 }
 export default SplashPage;

@@ -18,6 +18,14 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
+      first_name: {
+        allowNull: false,
+        type: DataTypes.STRING(50)
+      },
+      last_name: {
+        allowNull: false,
+        type: DataTypes.STRING(50)
+      },
       email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -31,6 +39,11 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           len: [60, 60],
         },
+      },
+      funds: {
+        allowNull: false,
+        type: DataTypes.FLOAT,
+        default: 0.0
       },
     },
     {
@@ -101,3 +114,4 @@ module.exports = (sequelize, DataTypes) => {
 
   return User;
 };
+

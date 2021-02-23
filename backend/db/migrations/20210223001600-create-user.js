@@ -11,17 +11,29 @@ module.exports = {
       username: {
         type: Sequelize.STRING(30),
         allowNull: false,
-        unique: true
-
+        unique: true,
+      },
+      first_name: {
+        allowNull: false,
+        type: Sequelize.STRING(50)
+      },
+      last_name: {
+        allowNull: false,
+        type: Sequelize.STRING(50)
       },
       email: {
         type: Sequelize.STRING(256),
         allowNull: false,
-        unique: true
+        unique: true,
       },
       hashedPassword: {
         type: Sequelize.STRING.BINARY,
         allowNull: false,
+      },
+      funds: {
+        allowNull: true,
+        type: Sequelize.FLOAT,
+        default: 0.0
       },
       createdAt: {
         allowNull: false,
