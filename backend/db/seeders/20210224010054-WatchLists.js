@@ -9,7 +9,7 @@ module.exports = {
       Example:
       */
       return queryInterface.bulkInsert('Watchlists', [
-        {user_id:1}
+        {user_id:4}
     ], {});
   },
 

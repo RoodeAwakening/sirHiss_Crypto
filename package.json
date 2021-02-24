@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/RoodeAwakening/sirHiss_Crypto/issues"
   },
-  "homepage": "https://github.com/RoodeAwakening/sirHiss_Crypto#readme"
+  "homepage": "https://github.com/RoodeAwakening/sirHiss_Crypto#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
 }

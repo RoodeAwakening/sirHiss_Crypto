@@ -11,8 +11,14 @@ function Navigation({ isLoaded }) {
   const sessionUser = useSelector((state) => state.session.user);
 
   let sessionLinks;
+  let navLinks;
   if (sessionUser) {
     sessionLinks = <ProfileButton user={sessionUser} />;
+    navLinks = (
+      <NavLink exact to="/dashboard" id="nav_home-btn">
+        <img src={nav_logo} />
+      </NavLink>
+    );
   } else {
     sessionLinks = (
       <>
@@ -25,16 +31,18 @@ function Navigation({ isLoaded }) {
         </NavLink>
       </>
     );
+    navLinks = (
+      <NavLink exact to="/" id="nav_home-btn">
+        <img src={nav_logo} />
+      </NavLink>
+    );
   }
+
   return (
     <div className="nav_body">
       <div className="nav_links">
         <ul>
-          <li id="nav_home_logo">
-            <NavLink exact to="/" id="nav_home-btn">
-              <img src={nav_logo} />
-            </NavLink>
-          </li>
+          <li id="nav_home_logo">{navLinks}</li>
         </ul>
 
         <div className="nav_linkButtons-spacer">

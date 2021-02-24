@@ -9,7 +9,10 @@ module.exports = {
       Example:
       */
       return queryInterface.bulkInsert('WatchlistAssets', [
-        {watchlist_id:1,listAssets_id:1}
+        {watchlist_id:3,listAssets_id:2},
+        {watchlist_id:3,listAssets_id:3},
+        {watchlist_id:3,listAssets_id:6},
+        {watchlist_id:3,listAssets_id:4},
     ], {});
   },
 
