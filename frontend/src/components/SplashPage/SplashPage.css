@@ -32,16 +32,38 @@ line-height: 28px;
 
 .splash_signup {
   display: flex;
+  background-color: #c3f53c;
+  padding:20px 151px;
+  align-items: center;
 }
 
 .splash_signup-info-container {
-  background-color: #9faf71;
+  background-color: #c3f53c;
   width: 50%;
+  
+  
 }
 
 .splash_signup-info {
-
+    height: 650px;
+  width: 467px;
   background-color: #c3f53c;
+}
+.splash_signup-info h1{
+  font-family: "Capsule Sans Display",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60px;
+}
+.splash_signup-info h3{
+  font-family: "Capsule Sans Display",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: -1.75px;
+  margin-bottom: 40px;
 }
 
 .splash_signup-video-container {
