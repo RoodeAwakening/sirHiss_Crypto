@@ -71,13 +71,13 @@ module.exports = (sequelize, DataTypes) => {
     //user has many portfolioholding
     User.hasMany(models.PortfolioHolding,{foreignKey:'user_id'})
     //user has one watchlist
-    User.belongsTo(models.WatchList,{foreignKey:'user_id'})
+    User.belongsTo(models.Watchlist,{foreignKey:'user_id'})
 
-    User.belongsToMany(models.ListAsset,{
-      through: 'WatchLists',
-      foreignKey: 'user_id',
-      otherkey: "listAssets_id"
-    })
+    // User.belongsToMany(models.ListAsset,{
+    //   through: 'Watchlists',
+    //   foreignKey: 'user_id',
+    //   otherkey: "listAssets_id"
+    // })
 
 
 

@@ -21,7 +21,7 @@ function SplashPage() {
               money in motion. Sign up and get your first coin for free. Certain
               limitations apply.
             </h3>
-            <button><NavLink to="/signup"><h1>Sign Up</h1></NavLink></button>
+            <NavLink to="/signup" id="splash_signup"><h1>Sign Up</h1></NavLink>
           </div>
         </div>
         <div className="splash_signup-video-container">
@@ -111,7 +111,7 @@ function SplashPage() {
           <img src={splashCryptoPhone}/>
           <h2>Tap into the cryptocurrency market to buy, hold, and sell Bitcoin, Ethereum, Dogecoin, and more, 24/7 with SirHiss Crypto.</h2>
           
-          <button><NavLink to="/signup"><h1>Sign Up</h1></NavLink></button>
+         <NavLink to="/signup" id="splash_signup"><h1>Sign Up</h1></NavLink>
         </div>
       </div>
       <div className="splash_middle-5"></div>
