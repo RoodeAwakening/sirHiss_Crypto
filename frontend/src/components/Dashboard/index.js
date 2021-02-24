@@ -11,7 +11,7 @@ function Dashboard(){
   if (!sessionUser) {
     return <Redirect to="/login" />
   }
-  console.log(sessionUser);
+  //console.log(sessionUser);
   return(
     <div>
       <h2>Hello From Dashboard</h2>

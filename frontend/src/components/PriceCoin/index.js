@@ -7,6 +7,11 @@ import "./PriceCoin.css";
 
 
 function PriceCoin(){
+  const sessionUser = useSelector((state) => state.session.user);
+  if (!sessionUser) {
+    return <Redirect to="/login" />
+  }
+  
   return(
     <h2>Hello From PriceCoin</h2>
   )

@@ -7,6 +7,11 @@ import "./Price.css";
 
 
 function Price(){
+  const sessionUser = useSelector((state) => state.session.user);
+  if (!sessionUser) {
+    return <Redirect to="/login" />
+  }
+  
   return(
     <h2>Hello From Price</h2>
   )

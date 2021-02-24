@@ -7,6 +7,11 @@ import "./News.css";
 
 
 function News(){
+  const sessionUser = useSelector((state) => state.session.user);
+  if (!sessionUser) {
+    return <Redirect to="/login" />
+  }
+  
   return(
     <h2>Hello From News</h2>
   )

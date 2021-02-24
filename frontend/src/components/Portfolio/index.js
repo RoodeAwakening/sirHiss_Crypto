@@ -7,6 +7,11 @@ import "./Portfolio.css";
 
 
 function Portfolio(){
+  const sessionUser = useSelector((state) => state.session.user);
+  if (!sessionUser) {
+    return <Redirect to="/login" />
+  }
+  
   return(
     <h2>Hello From Portfolio</h2>
   )
