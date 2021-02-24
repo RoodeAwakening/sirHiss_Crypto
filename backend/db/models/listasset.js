@@ -26,11 +26,15 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   ListAsset.associate = function(models) {
     //list asset belongs to a watchlists
-    ListAsset.belongsTo(models.WatchList,{foreignKey:listAssets_id})
+    ListAsset.belongsToMany(models.WatchList,{
+      through:'WatchlistAssets',
+      foreignKey:'listAssets_id',
+      otherKey:'watchlist_id'
+    })
     //list asset belongs to many transactions
-    ListAsset.belongsTo(models.Transaction,{foreignKey:listAssets_id})
+    ListAsset.belongsTo(models.Transaction,{foreignKey:'listAssets_id'})
     //list asset belongs to a portfolioAssets
-    ListAsset.belongsTo(models.PortfolioAsset,{foreignKey:listAssets_id})
+    ListAsset.belongsTo(models.PortfolioHolding,{foreignKey:'listAssets_id'})
   };
   return ListAsset;
 };

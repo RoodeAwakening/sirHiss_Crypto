@@ -14,11 +14,20 @@
 
 # `Watchlists`
 
+| Column Name | Data Type | Details               | Description                        |
+| ----------- | --------- | --------------------- | ---------------------------------- |
+| `id`        | integer   | not null, primary key | Watchlists unique id               |
+| `user_id`   | integer   | not null, foreign key | User that the watchlist belongs to |
+| `createdAt` | datetime  | not null              | timestamp                          |
+| `updatedAt` | datetime  | not null              | timestamp                          |
+
+# `watchlistAssets`
+
 | Column Name     | Data Type | Details               | Description                              |
 | --------------- | --------- | --------------------- | ---------------------------------------- |
-| `id`            | integer   | not null, primary key | Watchlists unique id                     |
-| `user_id`       | integer   | not null, foreign key | User that the watchlist belongs to       |
-| `listAssets_id` | integer   | not null, foreign key | Coin that belongs to the users watchlist |
+| `id`            | integer   | not null, primary key | WatchlistAssets unique id                |
+| `watchlist_id`  | integer   | not null, foreign key | Coin that belongs to the users watchlist |
+| `listAssets_id` | integer   | not null, foreign key | Coin information                         |
 | `createdAt`     | datetime  | not null              | timestamp                                |
 | `updatedAt`     | datetime  | not null              | timestamp                                |
 

@@ -8,9 +8,9 @@ module.exports = {
 
       Example:
       */
-      return queryInterface.bulkInsert('PortfolioHoldings', [
-        {user_id:7,listAssets_id:2,coinCount:2}
-    ], {});
+      return queryInterface.bulkInsert('Transactions', [
+        {user_id:7,listAssets_id:2,portfolioHoldings_id:2,price:1.00,coinCount:1,transactionType:'buy'}
+      ], {});
   },
 
   down: (queryInterface, Sequelize) => {
@@ -20,6 +20,6 @@ module.exports = {
 
       Example:
       */
-      return queryInterface.bulkDelete('PortfolioHoldings', null, {});
+      return queryInterface.bulkDelete('Transactions', null, {});
   }
 };

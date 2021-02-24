@@ -8,8 +8,8 @@ module.exports = {
 
       Example:
       */
-      return queryInterface.bulkInsert('WatchLists', [
-        {user_id:7,listAssets_id:2}
+      return queryInterface.bulkInsert('PortfolioHoldings', [
+        {user_id:7,listAssets_id:2,coinCount:1}
     ], {});
   },
 
@@ -20,6 +20,6 @@ module.exports = {
 
       Example:
       */
-      return queryInterface.bulkDelete('WatchLists', null, {});
+      return queryInterface.bulkDelete('PortfolioHoldings', null, {});
   }
 };

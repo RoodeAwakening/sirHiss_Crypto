@@ -67,11 +67,19 @@ module.exports = (sequelize, DataTypes) => {
   User.associate = function (models) {
 
     //user has many transations 
-    User.hasMany(models.Transaction,{foreignKey:user_id})
+    User.hasMany(models.Transaction,{foreignKey:'user_id'})
     //user has many portfolioholding
-    User.hasMany(models.PortfolioHolding,{foreignKey:user_id})
+    User.hasMany(models.PortfolioHolding,{foreignKey:'user_id'})
     //user has one watchlist
-    User.hasMany(models.WatchList,{foreignKey:user_id})
+    User.belongsTo(models.WatchList,{foreignKey:'user_id'})
+
+    User.belongsToMany(models.ListAsset,{
+      through: 'WatchLists',
+      foreignKey: 'user_id',
+      otherkey: "listAssets_id"
+    })
+
+
 
   };
 
