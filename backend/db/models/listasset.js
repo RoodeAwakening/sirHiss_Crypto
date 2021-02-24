@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   ListAsset.associate = function(models) {
     //list asset belongs to a watchlists
-    ListAsset.belongsToMany(models.WatchList,{
+    ListAsset.belongsToMany(models.Watchlist,{
       through:'WatchlistAssets',
       foreignKey:'listAssets_id',
       otherKey:'watchlist_id'
