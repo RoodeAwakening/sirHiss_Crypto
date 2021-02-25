@@ -19,17 +19,6 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Watchlist.associate = function(models) {
     
-    // // watchlist belongs to user
-    // WatchList.belongsTo(models.User,{foreignKey:'user_id'})
-    
-    // // watchlist has many list listAssets
-    // WatchList.hasMany(models.ListAsset,{foreignKey:'listAssets_id'})
-
-    // Watchlist.belongsto(models.User,{
-    //   foreignKey:
-    //   through:
-    //   otherKey:
-    // })
 
     Watchlist.belongsToMany(models.ListAsset,{
       through:'WatchlistAssets',
@@ -38,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     })
 
    
-   // Person.belongsToMany(models.Course, columnMapping);
+ 
 
   };
   return Watchlist;

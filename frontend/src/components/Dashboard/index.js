@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 
 import Watchlist from '../Watchlist'
+import User from '../User'
 import "./Dashboard.css";
 
 //watchlist
@@ -22,6 +23,8 @@ function Dashboard(){
       <h1>username: {sessionUser.username}</h1>
       <h1>userId: {sessionUser.id}</h1>
       <Watchlist user={sessionUser}/>
+      <User />
+      
      
     </div>
   )

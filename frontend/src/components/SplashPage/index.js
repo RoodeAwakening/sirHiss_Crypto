@@ -27,18 +27,19 @@ function SplashPage() {
         <div className="splash_signup-video-container">
           <div className="splash_signup-video">
             <img src={splashImage}/>
-            <video
+            {/* <video
               src="https://snowball-02.icedrive.io/?p=Am4cDCzceRLLmklX86HJzleQ9CXAj9yImLI_RzC3tCQLJYKbUOBedb.UqvazH45Izypd9HpFbmN2NKFSFcbmPuoGrvGunCQV3jEUlxiutR2HJOn6IKCWj7CLtH6xR8YPzlvtTbQ211U75Ml3Mza70A--&w=256&h=256&m=middle"
               autoPlay
               loop
               muted
-            />
+            /> */}
           </div>
         </div>
       </div>
 
       <div className="splash_middle-1">
         <div className="splash_middle-1_trading-video-container">
+          
           <video
             id="splash_trading-video"
             src="https://cdn.robinhood.com/assets/superbowl/superbowl.mp4"

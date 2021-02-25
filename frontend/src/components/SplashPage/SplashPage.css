@@ -40,16 +40,17 @@
   .splash_signup-info-container {
     background-color: #c3f53c;
     width: 50%;
+    height: auto;
     
     
   }
   
   .splash_signup-info {
-      height: 650px;
-    width: 467px;
+        width: 467px;
     background-color: #c3f53c;
   }
   .splash_signup-info h1{
+    
     font-family: "Capsule Sans Display",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
     font-size: 52px;
     font-style: normal;
@@ -81,13 +82,20 @@
   }
   
   .splash_middle-1_trading-video-container {
-    display: flex;
+    width: 50%;
+  }
+  .splash_middle-1_trading-blurb-container {
+    width: 50%;
   }
   
   #splash_trading-video {
     max-width: 791px;
+    
   }
   
+  .splash_trading-blurb{
+
+  }
   
   
   .splash_middle-2 {
