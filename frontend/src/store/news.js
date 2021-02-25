@@ -7,13 +7,14 @@ const setNews = (news) => {
   }
 }
 
+const newsApi = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=57584c410b2948c58a38d8f322c08085'
+
 export const getNews = () => async (dispatch) => {
   //get from api folder
-  const response = await fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=57584c410b2948c58a38d8f322c08085')
+  const response = await fetch(newsApi)
   if(!response.ok) throw response
   const news = await response.json()
-  console.log('--------news-------',news);
-  dispatch(setNews(news))
+    dispatch(setNews(news))
 }
 
 export default function newsReducer(state = { news: null }, action) {
