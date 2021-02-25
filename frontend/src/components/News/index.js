@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
-import MetaTags from 'react-meta-tags'
+
 import { Redirect } from "react-router-dom";
 import { getNews } from "../../store/news";
 
