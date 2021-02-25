@@ -29,13 +29,11 @@ function LoginFormPage() {
   };
   return (
     <div className="login_Body">
-
       <div className="login_left">
-        <div className='login_left-container'>
-        <img src={loginBackground} id='login_left-image'/>
+        <div className="login_left-container">
+          <img src={loginBackground} id="login_left-image" />
         </div>
       </div>
-
 
       <div className="login_right">
         <div className="login_Form_Container">
@@ -45,6 +43,8 @@ function LoginFormPage() {
                 <li key={idx}>{error}</li>
               ))}
             </ul>
+            <h1 id="login_header">Welcome to SirHiss Crypto</h1>
+            <h2 className="login_text">Email or username</h2>
             <label id="login_Name">
               <input
                 type="text"
@@ -54,6 +54,7 @@ function LoginFormPage() {
                 placeholder="Username or Email"
               />
             </label>
+            <h2 className="login_text">Password</h2>
             <label id="login_Password">
               <input
                 type="password"
@@ -64,9 +65,14 @@ function LoginFormPage() {
               />
             </label>
             <button type="submit" id="login_Button">
-              Log In
+              Sign In
             </button>
           </form>
+                <div>
+          <h4>Demo login </h4>
+          <h4>Username: Demo-lition </h4>
+          <h4>Password: P@ssw0rd </h4>
+                </div>
         </div>
       </div>
     </div>

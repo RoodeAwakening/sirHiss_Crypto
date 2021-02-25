@@ -11,7 +11,9 @@ function SignupFormPage() {
 
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");//added
+  const [password, setPassword] = useState("");//added
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
@@ -55,6 +57,26 @@ function SignupFormPage() {
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </label>
+          <label id="signup_firstName">
+           
+            <input
+              type="text"
+              placeholder='First Name'
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              required
+              />
+          </label>
+          <label id="signup_lastName">
+            
+            <input
+              placeholder='Last Name'
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               required
             />
           </label>
