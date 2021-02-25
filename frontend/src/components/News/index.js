@@ -11,7 +11,10 @@ function News() {
   const news = useSelector((state) => {
     return state?.news?.news?.articles?.map((item) => {
       return (
-   
+   <>
+   <head>
+   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+   </head>
         <div className='news_news-article'>
           <ul>
             <a href={item.url}>
@@ -23,7 +26,7 @@ function News() {
             <li>{item.content}</li>
           </ul>
         </div>
-  
+  </>
       );
     });
   });
