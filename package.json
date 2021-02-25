@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/RoodeAwakening/sirHiss_Crypto#readme",
   "dependencies": {
+    "newsapi": "^2.4.1",
     "node-fetch": "^2.6.1"
   }
 }

@@ -21,12 +21,14 @@ function SplashPage() {
               money in motion. Sign up and get your first coin for free. Certain
               limitations apply.
             </h3>
-            <NavLink to="/signup" id="splash_signup"><h1>Sign Up</h1></NavLink>
+            <NavLink to="/signup" id="splash_signup">
+              <h1>Sign Up</h1>
+            </NavLink>
           </div>
         </div>
         <div className="splash_signup-video-container">
           <div className="splash_signup-video">
-            <img src={splashImage}/>
+            <img src={splashImage} />
             {/* <video
               src="https://snowball-02.icedrive.io/?p=Am4cDCzceRLLmklX86HJzleQ9CXAj9yImLI_RzC3tCQLJYKbUOBedb.UqvazH45Izypd9HpFbmN2NKFSFcbmPuoGrvGunCQV3jEUlxiutR2HJOn6IKCWj7CLtH6xR8YPzlvtTbQ211U75Ml3Mza70A--&w=256&h=256&m=middle"
               autoPlay
@@ -37,9 +39,9 @@ function SplashPage() {
         </div>
       </div>
 
+          <hr />
       <div className="splash_middle-1">
         <div className="splash_middle-1_trading-video-container">
-          
           <video
             id="splash_trading-video"
             src="https://cdn.robinhood.com/assets/superbowl/superbowl.mp4"
@@ -50,12 +52,15 @@ function SplashPage() {
         </div>
         <div className="splash_middle-1_trading-blurb-container">
           <div className="splash_trading-blurb">
-            <h1>We are all investors.</h1>
-            <h3>So are you.</h3>
+            <div>
+              <h1>We are all investors.</h1>
+              <h3>So are you. <i class="fas fa-arrow-circle-right"></i></h3>
+            </div>
           </div>
         </div>
       </div>
 
+        <hr />
       <div className="splash_middle-2">
         <div className="splash_middle-2_trading-blurb-container-left">
           <div>
@@ -96,30 +101,39 @@ function SplashPage() {
       </div>
 
       <div className="splash_middle-3">
-        <div className='splash_middle-3-container'>
+        <div className="splash_middle-3-container">
+          
+
           <div>
-            <img src={splashCrypto}/>
+            <img src={splashCrypto} />
           </div>
           <div>
             <h1>Learn as you grow</h1>
-            <h2>Our goal is to make investing in financial markets more affordable, more intuitive, and more fun, no matter how much experience you have (or don’t have).</h2>
+            <h2>
+              Our goal is to make investing in financial markets more
+              affordable, more intuitive, and more fun, no matter how much
+              experience you have (or don’t have).
+            </h2>
           </div>
+          
         </div>
       </div>
       <div className="splash_middle-4">
         <div>
           <h1>Our Products</h1>
-          <img src={splashCryptoPhone}/>
-          <h2>Tap into the cryptocurrency market to buy, hold, and sell Bitcoin, Ethereum, Dogecoin, and more, 24/7 with SirHiss Crypto.</h2>
-          
-         <NavLink to="/signup" id="splash_signup"><h1>Sign Up</h1></NavLink>
+          <img src={splashCryptoPhone} />
+          <h2>
+            Tap into the cryptocurrency market to buy, hold, and sell Bitcoin,
+            Ethereum, Dogecoin, and more, 24/7 with SirHiss Crypto.
+          </h2>
+
+          <NavLink to="/signup" id="splash_signup">
+            <h1>Sign Up</h1>
+          </NavLink>
         </div>
       </div>
       <div className="splash_middle-5"></div>
-
-
     </div>
-
   );
 }
 export default SplashPage;

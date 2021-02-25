@@ -35,6 +35,11 @@ function News() {
     return <Redirect to="/login" />;
   }
 
+
+  
+
+
+
   return (
     <div>
       <h2>Hello From News</h2>
