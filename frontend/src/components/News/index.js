@@ -8,14 +8,14 @@ import "./News.css";
 
 function News() {
   const news = useSelector((state) => {
-    return state?.news?.news?.articles?.map((item) => {
+    return state?.news?.news?.data?.map((item) => {
       return (
         <div className='news_news-article'>
           <ul>
             <a href={item.url}>
               <li>{item.title}</li>
               <li>
-                <img src={item.urlToImage} className='news_news-image'/>
+                <img src={item.image} className='news_news-image'/>
               </li>
             </a>
             <li>{item.content}</li>
