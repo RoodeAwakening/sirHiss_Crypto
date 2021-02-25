@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 
 import "./LoginForm.css";
+import loginBackground from "../../images/login_left.jpg";
 
 function LoginFormPage() {
   const dispatch = useDispatch();
@@ -28,35 +29,45 @@ function LoginFormPage() {
   };
   return (
     <div className="login_Body">
-      <div className="login_Form_Container">
-        <form className='login_Form' onSubmit={handleSubmit}>
-          <ul>
-            {errors.map((error, idx) => (
-              <li key={idx}>{error}</li>
-            ))}
-          </ul>
-          <label id="login_Name">
-            <input
-              type="text"
-              value={credential}
-              onChange={(e) => setCredential(e.target.value)}
-              required
-              placeholder="Username or Email"
-            />
-          </label>
-          <label id="login_Password">
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              placeholder="Password"
-            />
-          </label>
-          <button type="submit" id="login_Button">
-            Log In
-          </button>
-        </form>
+
+      <div className="login_left">
+        <div className='login_left-container'>
+        <img src={loginBackground} id='login_left-image'/>
+        </div>
+      </div>
+
+
+      <div className="login_right">
+        <div className="login_Form_Container">
+          <form className="login_Form" onSubmit={handleSubmit}>
+            <ul>
+              {errors.map((error, idx) => (
+                <li key={idx}>{error}</li>
+              ))}
+            </ul>
+            <label id="login_Name">
+              <input
+                type="text"
+                value={credential}
+                onChange={(e) => setCredential(e.target.value)}
+                required
+                placeholder="Username or Email"
+              />
+            </label>
+            <label id="login_Password">
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                placeholder="Password"
+              />
+            </label>
+            <button type="submit" id="login_Button">
+              Log In
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
