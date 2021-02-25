@@ -29,7 +29,7 @@ const setNews = (news) => {
 
 export const getNews = () => async (dispatch) => {
   //get from api folder
-  const response = await fetch('http://api.mediastack.com/v1/news?access_key=cfea6637ef1847eda04ad79a5f995029&languages=en&keywords=crypto+currency&image=true')
+  const response = await fetch('https://api.mediastack.com/v1/news?access_key=cfea6637ef1847eda04ad79a5f995029&languages=en&keywords=crypto+currency&image=true')
   if(!response.ok) throw response
   const news = await response.json()
   console.log('---',news);
