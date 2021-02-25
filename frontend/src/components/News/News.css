@@ -13,7 +13,12 @@
 }
 
 .news_news-article{
-  margin-bottom: 175px;
+  margin-bottom: 75px;
+  
 
  
+}
+
+.news_news-image{
+  width: 400px;
 }

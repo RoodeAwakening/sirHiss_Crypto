@@ -15,7 +15,7 @@ function News() {
             <a href={item.url}>
               <li>{item.title}</li>
               <li>
-                <img src={item.urlToImage} />
+                <img src={item.urlToImage} className='news_news-image'/>
               </li>
             </a>
             <li>{item.content}</li>
