@@ -7,7 +7,7 @@ const setNews = (news) => {
   }
 }
 
-const newsApi = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=57584c410b2948c58a38d8f322c08085'
+const newsApi = 'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=57584c410b2948c58a38d8f322c08085'
 
 export const getNews = () => async (dispatch) => {
   //get from api folder
