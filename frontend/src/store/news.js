@@ -12,7 +12,7 @@ const newsApi = 'https://newsapi.org/v2/everything?q=bitcoin&apiKey=57584c410b29
 
 export const getNews = () => async (dispatch) => {
   //get from api folder
-  const response = await fetch(newsApi)
+  const response = await fetch('https://newsapi.org/v2/everything?q=bitcoin&apiKey=57584c410b2948c58a38d8f322c08085')
   if(!response.ok) throw response
   const news = await response.json()
     dispatch(setNews(news))
