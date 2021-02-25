@@ -76,11 +76,14 @@ hr {
   .splash_signup-video-container {
     background-color: #bec9a2;
     width: 50%;
+    text-align: center;
   }
+ 
   
   .splash_signup-video {
-    grid-area: splash_signup-video;
+    width: auto;
     background-color: #c3f53c;
+    
   }
   
   .splash_middle-1 {

@@ -28,18 +28,20 @@ function SplashPage() {
         </div>
         <div className="splash_signup-video-container">
           <div className="splash_signup-video">
-            <img src={splashImage} />
-            {/* <video
-              src="https://snowball-02.icedrive.io/?p=Am4cDCzceRLLmklX86HJzleQ9CXAj9yImLI_RzC3tCQLJYKbUOBedb.UqvazH45Izypd9HpFbmN2NKFSFcbmPuoGrvGunCQV3jEUlxiutR2HJOn6IKCWj7CLtH6xR8YPzlvtTbQ211U75Ml3Mza70A--&w=256&h=256&m=middle"
+            <div>
+
+            <video
+              src="https://f000.backblazeb2.com/file/sirhiss/splashSignupVideo.mp4"
               autoPlay
               loop
               muted
-            /> */}
+              />
+              </div>
           </div>
         </div>
       </div>
 
-          <hr />
+      <hr />
       <div className="splash_middle-1">
         <div className="splash_middle-1_trading-video-container">
           <video
@@ -54,13 +56,15 @@ function SplashPage() {
           <div className="splash_trading-blurb">
             <div>
               <h1>We are all investors.</h1>
-              <h3>So are you. <i class="fas fa-arrow-circle-right"></i></h3>
+              <h3>
+                So are you. <i class="fas fa-arrow-circle-right"></i>
+              </h3>
             </div>
           </div>
         </div>
       </div>
 
-        <hr />
+      <hr />
       <div className="splash_middle-2">
         <div className="splash_middle-2_trading-blurb-container-left">
           <div>
@@ -102,8 +106,6 @@ function SplashPage() {
 
       <div className="splash_middle-3">
         <div className="splash_middle-3-container">
-          
-
           <div>
             <img src={splashCrypto} />
           </div>
@@ -115,7 +117,6 @@ function SplashPage() {
               experience you have (or don’t have).
             </h2>
           </div>
-          
         </div>
       </div>
       <div className="splash_middle-4">
@@ -132,7 +133,7 @@ function SplashPage() {
           </NavLink>
         </div>
       </div>
-      <div className="splash_middle-5"></div>
+      <div className="splash_footer"></div>
     </div>
   );
 }
