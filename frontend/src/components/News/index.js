@@ -13,7 +13,6 @@ function News() {
       return (
    <>
    <head>
-   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
    </head>
         <div className='news_news-article'>
           <ul>
