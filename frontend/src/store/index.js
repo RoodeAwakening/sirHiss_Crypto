@@ -1,9 +1,12 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import sessionReducer from "./session";
+
+import { useDispatch, useSelector } from "react-redux";
 //2.
 import watchlistReducer from './watchlist'
 import userReducer from './user'
+import newsReducer from './news'
 //import portfolioReducer from './portfolio'
 //import transactionReducer from './transaction'
 
@@ -13,6 +16,7 @@ const rootReducer = combineReducers({
   // js and reducer name
   watchlist:watchlistReducer,
   user:userReducer,
+  news:newsReducer,
   // need to complete
   //transaction:transactionReducer
   //portfolio:portfolioReducer

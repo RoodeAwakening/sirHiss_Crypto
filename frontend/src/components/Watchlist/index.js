@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import {getWatchlist} from '../../store/watchlist'
 
 function Watchlist(props){
+
+ 
 const dispatch = useDispatch()
 useEffect(()=>{
   dispatch(getWatchlist())
@@ -12,9 +14,9 @@ useEffect(()=>{
 
   return (
     <>
-    <h3>Watchlist</h3>
+    <h3></h3>
 
-    <h4>null</h4>
+    
     <h4>{props.user.id}</h4>
     <button  size='large' color="inherit">GET A USER</button>
     </>

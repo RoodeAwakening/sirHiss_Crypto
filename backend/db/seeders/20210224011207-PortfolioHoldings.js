@@ -9,10 +9,12 @@ module.exports = {
       Example:
       */
       return queryInterface.bulkInsert('PortfolioHoldings', [
-        {user_id:4,listAssets_id:2,coinCount:50},
-        {user_id:4,listAssets_id:3,coinCount:10},
-        {user_id:4,listAssets_id:5,coinCount:3},
-        {user_id:4,listAssets_id:6,coinCount:18}
+        {user_id:7,listAssets_id:9,coinCount:50},
+        {user_id:8,listAssets_id:9,coinCount:50},
+        {user_id:9,listAssets_id:9,coinCount:50},
+        {user_id:7,listAssets_id:10,coinCount:10},
+        {user_id:7,listAssets_id:11,coinCount:3},
+        {user_id:7,listAssets_id:12,coinCount:18}
     ], {});
   },
 

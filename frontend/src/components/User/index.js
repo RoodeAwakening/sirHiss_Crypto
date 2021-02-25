@@ -12,7 +12,7 @@ export default function User(props){
 
     return (
       <>
-      <h2>Users</h2>
+      <h2>look here {props.user.id}</h2>
       </>
     )
   }

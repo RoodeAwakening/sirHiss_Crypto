@@ -6,8 +6,8 @@ const setUser = (user) => {
     payload: user,
   };
 };
-
 export const getUser = () => async (dispatch) => {
+  
   const response = await fetch("/api/dashboard/user");
   if (!response.ok) throw response;
   const user = await response.json();

@@ -11,17 +11,17 @@ const {User} = require('../../db/models')
 // news
 
 
-
 router.get('/watchlist', asyncHandler(async function(req, res){
+  
   const watchlist = await Watchlist.findAll()
-
   return res.json(watchlist)
   
 }))
 
 router.get('/user', asyncHandler(async function(req, res){
-  const user = await User.findAll()
 
+  // //original code
+  const user = await User.findAll()
   return res.json(user)
   
 }))
