@@ -1,11 +1,20 @@
 .dashboard_container{
   display: flex;
+  background-color: red;
 }
 
 .dashboard_left{
-
+background-color: saddlebrown;
+width: 60%;
 }
 
 .dashboard_right{
+background-color: sandybrown;
+width: 40%;
+}
 
+.dashboard_right_container{
+  display: flex;
+  justify-content: center;
+  background-color: seagreen;
 }
