@@ -12,9 +12,9 @@ module.exports = {
       Example:
       */
       return queryInterface.bulkInsert('Users', [
-        {first_name:'demo', last_name:'user', email:'demo@user.io', username: 'Demo-lition', funds:10846.00, hashedPassword: bcrypt.hashSync('password')},
-        {first_name:'Frank', last_name:'Jackson', email:faker.internet.email(), username:'hindsdust', funds:1000.00, hashedPassword: bcrypt.hashSync('password')},
-        {first_name:'Derek', last_name:'Roode',email:faker.internet.email(), username:'roughlyrecall', funds:25000.00, hashedPassword: bcrypt.hashSync('password')},
+        {firstName:'demo', lastName:'user', email:'demo@user.io', username: 'Demo-lition', funds:10846.00, hashedPassword: bcrypt.hashSync('password')},
+        {firstName:'Frank', lastName:'Jackson', email:faker.internet.email(), username:'hindsdust', funds:1000.00, hashedPassword: bcrypt.hashSync('password')},
+        {firstName:'Derek', lastName:'Roode',email:faker.internet.email(), username:'roughlyrecall', funds:25000.00, hashedPassword: bcrypt.hashSync('password')},
     
       ], {});
   },

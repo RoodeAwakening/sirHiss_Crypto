@@ -28,13 +28,14 @@ module.exports = (sequelize, DataTypes) => {
     //list asset belongs to a watchlists
     ListAsset.belongsToMany(models.Watchlist,{
       through:'WatchlistAssets',
-      foreignKey:'listAssets_id',
+      foreignKey:'listAssets_idA',
       otherKey:'watchlist_id'
     })
+    //ISSUE HERE
     //list asset belongs to many transactions
-    ListAsset.belongsTo(models.Transaction,{foreignKey:'listAssets_id'})
+    //ListAsset.belongsTo(models.Transaction,{foreignKey:'listAssets_idB'})
     //list asset belongs to a portfolioAssets
-    ListAsset.belongsTo(models.PortfolioHolding,{foreignKey:'listAssets_id'})
+    //ListAsset.belongsTo(models.PortfolioHolding,{foreignKey:'listAssets_idC'})
   };
   return ListAsset;
 };

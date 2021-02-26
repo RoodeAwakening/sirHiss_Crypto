@@ -18,7 +18,7 @@ export default function User(props){
 
     return (
       <>
-      {/* <h2>look here ${activeUser.funds}</h2> */}
+      <h2>Available Funds ${activeUser?.funds}</h2>
       </>
     )
   }

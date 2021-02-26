@@ -27,6 +27,18 @@ const validateSignup = [
     .exists({ checkFalsy: true })
     .isLength({ min: 6 })
     .withMessage("Password must be 6 characters or more."),
+  check("firstName")
+    .exists({ checkFalsy: true })
+    .isLength({ min: 3 })
+    .withMessage("First Name must be 3 characters or more."),
+  check("lastName")
+    .exists({ checkFalsy: true })
+    .isLength({ min: 6 })
+    .withMessage("Last Name must be 3 characters or more."),
+  check("funds")
+    .exists({ checkFalsy: false })
+    .isLength({ min: 0 })
+    .withMessage("Get funds?."),
   handleValidationErrors,
 ];
 
@@ -35,8 +47,9 @@ router.post(
   "/",
   validateSignup,
   asyncHandler(async (req, res) => {
-    const { email, password, username } = req.body;
-    const user = await User.signup({ email, username, password });
+    console.log('----reqUser',req);
+    const { email, password, username, firstName, lastName, funds } = req.body;
+    const user = await User.signup({ email, username, password, firstName, lastName, funds });
 
     await setTokenCookie(res, user);
 

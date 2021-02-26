@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
   PortfolioHolding.associate = function(models) {
 
     //portfolioHolding has many list assets
+    //ISSUE HERE
     PortfolioHolding.hasMany(models.ListAsset,{foreignKey:'listAssets_id'})
     //portfolioHoldings belongs to a user
     PortfolioHolding.belongsTo(models.User,{foreignKey:'user_id'})

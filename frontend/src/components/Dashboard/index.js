@@ -6,6 +6,7 @@ import { Redirect } from "react-router-dom";
 import Watchlist from "../Watchlist";
 import User from "../User";
 import News from "../News";
+import Coins from "../Coins";
 import DashboardChart from "../DashboardChart";
 import "./Dashboard.css";
 
@@ -25,6 +26,7 @@ function Dashboard() {
         <h1>Sessionusername: {sessionUser.email}</h1>
         <h1>SessionuserId: {sessionUser.id}</h1>
         <User user={sessionUser} />
+        <Coins />
         <News />
       </div>
       <div className="dashboard_right">

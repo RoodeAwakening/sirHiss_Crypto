@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import watchlistReducer from './watchlist'
 import userReducer from './user'
 import newsReducer from './news'
+import coinsReducer from './coins'
 //import portfolioReducer from './portfolio'
 //import transactionReducer from './transaction'
 
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   watchlist:watchlistReducer,
   user:userReducer,
   news:newsReducer,
+  coins:coinsReducer,
   // need to complete
   //transaction:transactionReducer
   //portfolio:portfolioReducer
