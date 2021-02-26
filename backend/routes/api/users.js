@@ -33,7 +33,7 @@ const validateSignup = [
     .withMessage("First Name must be 3 characters or more."),
   check("lastName")
     .exists({ checkFalsy: true })
-    .isLength({ min: 6 })
+    .isLength({ min: 3 })
     .withMessage("Last Name must be 3 characters or more."),
   check("funds")
     .exists({ checkFalsy: false })
@@ -47,7 +47,7 @@ router.post(
   "/",
   validateSignup,
   asyncHandler(async (req, res) => {
-    console.log('----reqUser',req);
+   console.log('----look here--->',req.body);
     const { email, password, username, firstName, lastName, funds } = req.body;
     const user = await User.signup({ email, username, password, firstName, lastName, funds });
 
