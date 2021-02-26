@@ -6,6 +6,8 @@ import {getUser} from '../../store/user'
 export default function User(props){
   const sessionuser = useSelector((state)=> state.session.user)
   const userId = sessionuser.id
+
+  // useSelector gets the state of stuff and i can pass to a variable
   const activeUser = useSelector((state)=> state.user.user)
   const dispatch = useDispatch()
     useEffect(() => {
@@ -16,7 +18,7 @@ export default function User(props){
 
     return (
       <>
-      <h2>look here ${activeUser.funds}</h2>
+      {/* <h2>look here ${activeUser.funds}</h2> */}
       </>
     )
   }
