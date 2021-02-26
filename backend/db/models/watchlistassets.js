@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {});
   WatchlistAsset.associate = function(models) {
-    // associations can be defined here
+    WatchlistAsset.belongsTo(models.Watchlist,{foreignKey:"watchlist_id"})
+    WatchlistAsset.belongsTo(models.ListAsset,{foreignKey:"listAssets_id"})
   };
   return WatchlistAsset;
 };

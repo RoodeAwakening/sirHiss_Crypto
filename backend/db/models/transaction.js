@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
     // transaction belongs to user
     Transaction.belongsTo(models.User,{foreignKey:'user_id'})
     // transaction has one list asset
-    Transaction.hasOne(models.ListAsset,{foreignKey:'listAssets_id'})
+    Transaction.belongsTo(models.ListAsset,{foreignKey:'listAssets_id'})
     // transaction belongs to portfolioHolding 
     Transaction.belongsTo(models.PortfolioHolding,{foreignKey:'portfolioHoldings_id'})
 

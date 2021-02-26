@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getWatchlist } from "../../store/watchlist";
-
 import "./Watchlist.css";
+
+import BTC from "../../images/coins/BTC.png";
 
 
 function Watchlist(props) {
@@ -23,7 +24,7 @@ function Watchlist(props) {
         <h4>{props.user.id}</h4>
         <div className='watchlist_items'>
           <ul>
-          <li>holdergggg</li>
+          <li><img src={BTC}/>holdergggg</li>
           <li>holder</li>
           <li>hold4er</li>
           <li>holder</li>

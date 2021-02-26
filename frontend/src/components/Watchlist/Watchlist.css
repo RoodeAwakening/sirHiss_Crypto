@@ -40,3 +40,8 @@
   height: 95px;
   background-color: black;
 }
+
+.watchlist_items img{
+  max-width: 35px;
+  
+}

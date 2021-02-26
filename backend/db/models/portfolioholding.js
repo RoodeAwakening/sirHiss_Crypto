@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
 
     //portfolioHolding has many list assets
     //ISSUE HERE
-    PortfolioHolding.hasMany(models.ListAsset,{foreignKey:'listAssets_id'})
+    PortfolioHolding.belongsTo(models.ListAsset,{foreignKey:'listAssets_id'})
     //portfolioHoldings belongs to a user
     PortfolioHolding.belongsTo(models.User,{foreignKey:'user_id'})
     //portfolioHolding has many transactions

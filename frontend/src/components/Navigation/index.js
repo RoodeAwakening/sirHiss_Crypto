@@ -13,7 +13,7 @@ function Navigation({ isLoaded }) {
   let sessionLinks;
   let navLinks;
   if (sessionUser) {
-    sessionLinks = <ProfileButton user={sessionUser} />;
+    sessionLinks = <ProfileButton user={sessionUser} id='nav_profile-button' />;
     navLinks = (
       <NavLink exact to="/dashboard" id="nav_home-btn">
         <img src={nav_logo} />

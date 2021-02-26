@@ -3,6 +3,7 @@ const asyncHandler = require("express-async-handler");
 const router = require("./users");
 //
 const { Watchlist } = require("../../db/models");
+const { WatchlistAsset } = require("../../db/models");
 const { User } = require("../../db/models");
 const { ListAsset } = require("../../db/models");
 const db = require("../../db/models");
@@ -17,12 +18,21 @@ router.get(
     // sent user id through the fetch call in the store and the use effect in the component
     const userId = req.params.id;
 
-    const watchlist = await Watchlist.findAll({
+    const watchlistArr = await Watchlist.findAll({
       where: {
         user_id: userId,
       },
+      include:{model:ListAsset}
     });
 
+    // const watchlist = watchlistArr.map((list,i)=>{
+    //   return {
+    //     coinCode:list.ListAssets.coinCode,
+    //     coinName:list.ListAssets.coinName,
+    //     coinLogo:list.ListAssets.coinLogo,
+    //     coinPrice:list.ListAssets.coinCurrentPrice,
+    //   }
+    // })
     return res.json(watchlist);
   })
 );
