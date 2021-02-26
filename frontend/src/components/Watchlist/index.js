@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getWatchlist } from "../../store/watchlist";
 
 import "./Watchlist.css";
 
+
 function Watchlist(props) {
+  const sessionuser = useSelector((state)=> state.session.user)
+  const userId = sessionuser.id
+
+  
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getWatchlist());
+    dispatch(getWatchlist(userId));
   }, [dispatch]);
 
   return (

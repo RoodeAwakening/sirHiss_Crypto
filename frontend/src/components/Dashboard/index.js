@@ -6,6 +6,7 @@ import { Redirect } from "react-router-dom";
 import Watchlist from "../Watchlist";
 import User from "../User";
 import News from "../News";
+import DashboardChart from "../DashboardChart";
 import "./Dashboard.css";
 
 //watchlist
@@ -20,6 +21,7 @@ function Dashboard() {
     <div className="dashboard_container">
       <div className="dashboard_left">
         <h2>Hello From Dashboard</h2>
+        <DashboardChart />
         <h1>Sessionusername: {sessionUser.email}</h1>
         <h1>SessionuserId: {sessionUser.id}</h1>
         <User user={sessionUser} />

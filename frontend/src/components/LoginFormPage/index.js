@@ -71,7 +71,7 @@ function LoginFormPage() {
                 <div>
           <h4>Demo login </h4>
           <h4>Username: Demo-lition </h4>
-          <h4>Password: P@ssw0rd </h4>
+          <h4>Password: password</h4>
                 </div>
         </div>
       </div>
