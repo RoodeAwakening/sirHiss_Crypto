@@ -7,11 +7,8 @@ const { WatchlistAsset } = require("../../db/models");
 const { User } = require("../../db/models");
 const { ListAsset } = require("../../db/models");
 const db = require("../../db/models");
-// owned stocks
-// watchlist
-// top 10 cryptos
-// news
 
+/////////WATCHLIST////////////
 router.get(
   "/watchlist/:id",
   asyncHandler(async function (req, res) {
@@ -22,13 +19,21 @@ router.get(
       where: {
         user_id: userId,
       },
-      include:{model:ListAsset},
-      order:[
+      include: { model: ListAsset },
+      order: [
         //[ListAsset,'coinCurrentPrice', 'DESC']
-        [ListAsset,'createdAt', 'DESC']
-      ]
-      
+        [ListAsset, "createdAt", "DESC"],
+      ],
     });
+
+    // router.post(
+    //   "/watchlist/",
+    //   asyncHandler(async (req, res, next) => {
+    //     const{ coidId} = req.body
+    //     const watchlist = await SOMETHING.SOMETHING({coinId})
+    //     return res.json({coinId})
+    //   })
+    // );
 
     // const watchlist = watchlistArr.map((list,i)=>{
     //   return {
@@ -53,14 +58,13 @@ router.get(
   })
 );
 
-
 router.get(
   "/coins",
   asyncHandler(async function (req, res) {
     console.log(ListAsset);
-    
+
     const coin = await ListAsset.findAll();
-   //console.log("----COIN-----", coin);
+    //console.log("----COIN-----", coin);
     return res.json(coin);
   })
 );

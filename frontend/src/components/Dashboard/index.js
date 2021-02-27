@@ -21,7 +21,7 @@ function Dashboard() {
   return (
     <div className="dashboard_container">
       <div className="dashboard_left">
-       
+
         <User user={sessionUser} />
         <DashboardChart />
         

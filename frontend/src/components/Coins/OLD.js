@@ -5,18 +5,14 @@ import { getCoins } from "../../store/coins";
 import "./Coins.css";
 
 function Coins() {
-  const watchlistAsset = useSelector((state) =>
-    state?.watchlist?.watchlist?.[0]?.ListAssets.map((asset) => {
-      return asset.coinCode;
-    })
-  );
 
-  console.log("---newlist", watchlistAsset);
 
-  // ABOVE
+
+
+
+// ABOVE
   const coins = useSelector((state) => {
     return state?.coins?.coins?.map((asset) => {
-      // console.log('---asset',asset);
       return (
         <ul>
           <li key={asset.coinCode}>
@@ -29,20 +25,15 @@ function Coins() {
             </div>
             <div className="coins_right">
               ${asset.coinCurrentPrice}
-              {watchlistAsset?.includes(asset.coinCode) ? (
-                <button
-                  className="fav_remove"
-                  className="fa fa-star checked"
-                ></button>
-              ) : (
-                <button className="fav_add" className="fa fa-star unChecked "></button>
-              )}
+              <button className="add_remove">X</button>
             </div>
           </li>
         </ul>
       );
     });
   });
+
+
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -53,6 +44,9 @@ function Coins() {
     <div className="coins_box">
       <div className="coins_container">
         <h3>Your Eye on the market</h3>
+
+
+
 
         <div className="coins_items">
           <div className="coins_each">{coins}</div>

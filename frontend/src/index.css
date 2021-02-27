@@ -10,3 +10,24 @@ body{
 ul {
   list-style-type: none;
 }
+
+
+
+
+.checked {
+  color:gold;
+  font-size: 20px;
+}
+
+.unChecked{
+
+  color: rgba(68, 68, 68, 0.288);
+}
+
+.fa,
+.fa-star {
+font-size: 20px;
+}
+
+/* <span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span> */

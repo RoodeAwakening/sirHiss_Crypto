@@ -22,7 +22,7 @@ function Watchlist(props) {
             </div>
             <div className="watchlist_right">
               ${asset.coinCurrentPrice}
-              <h4 className="add_remove">X</h4>
+              <button className="add_remove" class="fa fa-star checked"></button>
               </div>
           </li>
         </ul>
