@@ -60,25 +60,27 @@ export const getRemoveWatchlist = () => async (dispatch) => {
 };
 //-----------------------------------
 //reducer
+export default function watchlistReducer(state = { watchlist: null }, action) {
+   switch(action.type){
+    case SET_WATCHLIST:
+      return {...state,watchlist:action.payload}
+    default:
+      return state;
+  }
+
+// THIS IS THE NEW ONE I WAS THINKING MIGHT WORK TO STORE STATE
 // export default function watchlistReducer(state = { watchlist: null }, action) {
 //   let newState;
-//   switch(action.type){
+//   switch (action.type) {
 //     case SET_WATCHLIST:
-//       return {...state,watchlist:action.payload}
-//       case REMOVE_ITEM:
+//       newState = Object.assign({}, state);
+//       newState.watchlist = action.payload;
+//       //console.log('newstate',newState.watchlist.[0].ListAssets);
+//       return newState;
 //     default:
 //       return state;
 //   }
 
-export default function watchlistReducer(state = { watchlist: null }, action) {
-  let newState;
-  switch (action.type) {
-    case SET_WATCHLIST:
-      newState = Object.assign({}, state);
-      newState.watchlist = action.payload;
-      //console.log('newstate',newState.watchlist.[0].ListAssets);
-      return newState;
-    default:
-      return state;
-  }
+
+
 }

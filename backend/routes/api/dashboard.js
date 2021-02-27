@@ -26,26 +26,15 @@ router.get(
       ],
     });
 
-    // router.post(
-    //   "/watchlist/",
-    //   asyncHandler(async (req, res, next) => {
-    //     const{ coidId} = req.body
-    //     const watchlist = await SOMETHING.SOMETHING({coinId})
-    //     return res.json({coinId})
-    //   })
-    // );
-
-    // const watchlist = watchlistArr.map((list,i)=>{
-    //   return {
-    //     coinCode:list.ListAssets.coinCode,
-    //     coinName:list.ListAssets.coinName,
-    //     coinLogo:list.ListAssets.coinLogo,
-    //     coinPrice:list.ListAssets.coinCurrentPrice,
-    //   }
-    // })
     return res.json(watchlistArr);
   })
 );
+
+router.delete('/watchlist/:id',asyncHandler(async function (req, res){
+  
+}))
+
+/////////WATCHLIST////////////
 
 router.get(
   "/user/:id",
