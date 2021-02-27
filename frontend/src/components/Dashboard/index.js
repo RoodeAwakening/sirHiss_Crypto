@@ -30,10 +30,8 @@ function Dashboard() {
         <News />
       </div>
       <div className="dashboard_right">
-        <div className='dashboard_right_container'>
-
-      
-        <Watchlist user={sessionUser}  />
+        <div className="dashboard_right_container">
+          <Watchlist user={sessionUser} />
         </div>
       </div>
     </div>

@@ -22,7 +22,8 @@ router.get(
       where: {
         user_id: userId,
       },
-      include:{model:ListAsset}
+      include:{model:ListAsset},
+      
     });
 
     // const watchlist = watchlistArr.map((list,i)=>{
@@ -33,7 +34,7 @@ router.get(
     //     coinPrice:list.ListAssets.coinCurrentPrice,
     //   }
     // })
-    return res.json(watchlist);
+    return res.json(watchlistArr);
   })
 );
 

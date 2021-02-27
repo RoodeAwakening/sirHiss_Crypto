@@ -15,7 +15,7 @@ export const getWatchlist = (userId) => async (dispatch) => {
   const response = await fetch(`/api/dashboard/watchlist/${userId}`)
   if(!response.ok) throw response
   const watchlist = await response.json()
-  console.log('--------watchlist-------',userId);
+
   dispatch(setWatchlist(watchlist))
 }
 
