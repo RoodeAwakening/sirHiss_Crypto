@@ -12,21 +12,24 @@ function Watchlist(props) {
     return state?.watchlist?.watchlist?.[0]?.ListAssets?.map((asset) => {
       return (
         <ul>
-          <li>
+          <li key={asset.coinCode}>
             <div className="watchlist_left">
               <img src={asset.coinLogo} />
-              <div className="wathlist_code">
+              <div className="watchlist_code">
                 <div id="watchlist_coin-CODE">{asset.coinCode}</div>
                 <div id="watchlist_coin-NAME">{asset.coinName}</div>
               </div>
             </div>
-            <div className="watchlist_right">${asset.coinCurrentPrice}</div>
+            <div className="watchlist_right">
+              ${asset.coinCurrentPrice}
+              <h4 className="add_remove">X</h4>
+              </div>
           </li>
         </ul>
       );
     });
   });
-  console.log("000000", watchlistAsset);
+
 
   const dispatch = useDispatch();
   useEffect(() => {

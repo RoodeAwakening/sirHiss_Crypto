@@ -46,15 +46,15 @@ function News() {
     return <Redirect to="/login" />;
   }
   return (
-    <div>
+    <div className='news_box'>
       <div className='news_wrapper'>
       <div className="news_news-block">
         <div className="news_news-article">
           
         <NavLink to='/news'><h2 > news </h2></NavLink>
           <div className="news_news-article">
-            <ul>
               <a href="https://www.engadget.com/tesla-to-take-bitcoin-payments-140109988.html">
+            <ul>
                 <li className='news_title'>
                   Tesla buys $1.5 in Bitcoin, will soon accept it as payment
                 </li>
@@ -65,7 +65,6 @@ function News() {
                     alt='articleImage'
                   />
                 </li>
-              </a>
               <li className='news_content'>
                 "Elon Musks cryptocurrency hype was more than just idle talk.
                 CNBCreports that Tesla not only bought $1.5 billion worth of
@@ -73,10 +72,11 @@ function News() {
                 start taking pay… [+1182 chars]"
               </li>
             </ul>
+              </a>
           </div>
           <div className="news_news-article">
-            <ul>
               <a href="https://www.theverge.com/2021/2/9/22275243/teslas-bitcoin-purchase-clashes-climate-change-mission">
+            <ul>
                 <li className='news_title'>
                   Tesla’s $1.5 billion bitcoin purchase clashes with its
                   environmental aspirations
@@ -88,7 +88,6 @@ function News() {
                     alt='articleImage'
                   />
                 </li>
-              </a>
               <li className='news_content'>
                 Tesla, led by Elon Musk, confirmed that it purchased about $ 1.5
                 billion in bitcoin in January and expects to start accepting it
@@ -96,10 +95,11 @@ function News() {
                 Getty… [+6118 chars]
               </li>
             </ul>
+              </a>
           </div>
           <div className="news_news-article">
-            <ul>
               <a href="https://www.wired.com/story/would-you-trade-bitcoin-tesla/">
+            <ul>
                 <li className='news_title'>Would You Trade a Bitcoin for a Tesla?</li>
                 <li>
                   <img
@@ -108,7 +108,6 @@ function News() {
                     alt='articleImage'
                   />
                 </li>
-              </a>
               <li className='news_content'>
                 For a brief moment on Sunday, before Tesla said it had invested
                 $1.5 billion in bitcoin and planned to let people use the
@@ -116,10 +115,11 @@ function News() {
                 expressed with a … [+3302 chars]
               </li>
             </ul>
+              </a>
           </div>
           <div className="news_news-article">
-            <ul>
               <a href="http://techcrunch.com/2021/02/12/jack-dorsey-and-jay-z-invest-23-6-million-to-fund-bitcoin-development/">
+            <ul>
                 <li className='news_title'>
                   Jack Dorsey and Jay Z invest $23.6 million to fund Bitcoin
                   development
@@ -131,7 +131,6 @@ function News() {
                     alt='articleImage'
                   />
                 </li>
-              </a>
               <li className='news_content'>
                 Twitter and Square CEO Jack Dorsey and rapper Jay Z have created
                 an endowment to fund bitcoin development initially in Africa and
@@ -139,10 +138,11 @@ function News() {
                 is … [+3984 chars]
               </li>
             </ul>
+              </a>
           </div>
           <div className="news_news-article">
-            <ul>
               <a href="http://techcrunch.com/2021/02/08/tesla-buys-1-5b-in-bitcoin-may-accept-the-cryptocurrency-as-payment-in-the-future/">
+            <ul>
                 <li className='news_title'>
                   Tesla buys $1.5B in bitcoin, may accept the cryptocurrency as
                   payment in the future
@@ -154,7 +154,6 @@ function News() {
                     alt='articleImage'
                   />
                 </li>
-              </a>
               <li className='news_content'>
                 Today in an SEC filing, Tesla disclosed that it has acquired
                 $1.5 billion in bitcoin, the popular cryptocurrency. Moreover,
@@ -162,10 +161,11 @@ function News() {
                 as a form o… [+2230 chars]
               </li>
             </ul>
+              </a>
           </div>
           <div className="news_news-article">
-            <ul>
               <a href="https://www.wired.com/story/gadget-lab-podcast-491/">
+            <ul>
                 <li className='news_title'>
                   This Cryptocurrency Is Really Burning a Hole in My Pocket
                 </li>
@@ -176,7 +176,6 @@ function News() {
                     alt='articleImage'
                   />
                 </li>
-              </a>
               <li className='news_content'>
                 When Bitcoin first appeared out of digital thin air, it was
                 hailed as having the potential to upend the way people spent
@@ -184,11 +183,12 @@ function News() {
                 only trickling in… [+2039 chars]
               </li>
             </ul>
+              </a>
           </div>
 
           <div className="news_news-article">
-            <ul>
               <a href="https://www.cnn.com/2021/02/21/investing/stocks-week-ahead/index.html">
+            <ul>
                 <li className='news_title'>How bitcoin is like a teenager</li>
                 <li>
                   <img
@@ -197,17 +197,17 @@ function News() {
                     alt='articleImage'
                   />
                 </li>
-              </a>
               <li className='news_content'>
                 The euphoria that's swept through markets certainly plays a
                 role, as investors chasing returns in a low-interest world eye
                 alternative investments.[+2029 chars]{" "}
               </li>
             </ul>
+              </a>
           </div>
           <div className="news_news-article">
-            <ul>
               <a href="https://gizmodo.com/miami-may-start-paying-city-employees-in-bitcoin-1846258140">
+            <ul>
                 <li className='news_title'>Miami May Start Paying City Employees in Bitcoin</li>
                 <li>
                   <img
@@ -216,7 +216,6 @@ function News() {
                     alt='articleImage'
                   />
                 </li>
-              </a>
               <li className='news_content'>
                 Miamis mayor, Francis Suarez, is champing at the bit to rebrand
                 his city as a haven for tech entrepreneurs and the tax dollars
@@ -224,10 +223,12 @@ function News() {
                 push to m… [+2454 chars]
               </li>
             </ul>
+              </a>
           </div>
         </div>
         </div>
       </div>
+      <h2>....Searching for news</h2>
     </div>
   );
 }

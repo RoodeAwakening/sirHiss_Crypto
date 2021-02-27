@@ -1,6 +1,9 @@
+import chart_placeholder from "../../images/chart_placeholder.PNG";
+import "./DashboardChart.css";
+
 function DashboardChart(){
  return(
- <h1>CHART HERE</h1>
+ <div className='chart_container'><img src={chart_placeholder} /></div>
  ) 
 }
 

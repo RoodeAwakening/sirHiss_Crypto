@@ -14,7 +14,7 @@ export const getCoins = () => async (dispatch) => {
   const response = await fetch(`/api/dashboard/coins`)
   if(!response.ok) throw response
   const coins = await response.json()
-  console.log('--------coins-------',coins);
+
   dispatch(setCoins(coins))
 }
 

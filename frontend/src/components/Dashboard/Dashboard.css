@@ -18,3 +18,9 @@ width: 40%;
   justify-content: center;
   
 }
+
+.splash_footer{
+  margin-top: 115px;
+  height: 95px;
+  background-color: black;
+}

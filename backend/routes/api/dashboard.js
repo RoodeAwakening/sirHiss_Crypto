@@ -23,6 +23,10 @@ router.get(
         user_id: userId,
       },
       include:{model:ListAsset},
+      order:[
+        //[ListAsset,'coinCurrentPrice', 'DESC']
+        [ListAsset,'createdAt', 'DESC']
+      ]
       
     });
 

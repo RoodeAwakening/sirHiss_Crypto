@@ -1,3 +1,10 @@
+
+.news_box{
+  margin-left: 50px;
+  box-shadow: 1px 1px 5px rgb(10, 10, 10);
+  margin-top: 20px;
+}
+
 .news_wrapper {
   display: flex;
   justify-content: center;
@@ -18,8 +25,18 @@
 }
 
 .news_news-article ul {
-  border: rgba(46, 44, 44, 0.466) solid 2px;
+  box-shadow: 1px 1px 3px rgba(63, 59, 59, 0.699);
+ 
   padding: 0px 20px;
+}
+
+.news_news-article li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+ width: 100%;
+  margin-right: 10px ;
 }
 
 .news_title {
@@ -48,3 +65,4 @@
   padding-top: 25px;
   padding-bottom: 25px;
 }
+

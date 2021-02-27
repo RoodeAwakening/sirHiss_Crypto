@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useDispatch } from 'react-redux';
 import {  useSelector } from "react-redux";
 import {getUser} from '../../store/user'
+import "./User.css";
 
 export default function User(props){
   const sessionuser = useSelector((state)=> state.session.user)
@@ -17,9 +18,10 @@ export default function User(props){
 
 
     return (
-      <>
+      <div className='user_container'>
+
       <h2>Available Funds ${activeUser?.funds}</h2>
-      </>
+      </div>
     )
   }
 

@@ -21,11 +21,10 @@ function Dashboard() {
   return (
     <div className="dashboard_container">
       <div className="dashboard_left">
-        <h2>Hello From Dashboard</h2>
-        <DashboardChart />
-        <h1>Sessionusername: {sessionUser.email}</h1>
-        <h1>SessionuserId: {sessionUser.id}</h1>
+       
         <User user={sessionUser} />
+        <DashboardChart />
+        
         <Coins />
         <News />
       </div>
@@ -34,6 +33,8 @@ function Dashboard() {
           <Watchlist user={sessionUser} />
         </div>
       </div>
+      
+      <div className="splash_footer"></div>
     </div>
   );
 }
