@@ -11,7 +11,7 @@ function Watchlist(props) {
   const watchlistAsset = useSelector((state) => {
     return state?.watchlist?.watchlist?.[0]?.ListAssets?.map((asset) => {
       return (
-        <ul>
+        <ul key={asset.coinCode}>
           <li key={asset.coinCode}>
             <div className="watchlist_left">
               <img src={asset.coinLogo} />
@@ -22,7 +22,7 @@ function Watchlist(props) {
             </div>
             <div className="watchlist_right">
               ${asset.coinCurrentPrice}
-              <button className="add_remove" class="fa fa-star checked"></button>
+              <button className="add_remove" className="fa fa-star checked"></button>
               </div>
           </li>
         </ul>

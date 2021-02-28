@@ -1,6 +1,7 @@
 const express = require("express");
 const asyncHandler = require("express-async-handler");
 const router = require("./users");
+
 //
 const { Watchlist } = require("../../db/models");
 const { WatchlistAsset } = require("../../db/models");
@@ -29,9 +30,22 @@ router.get(
     return res.json(watchlistArr);
   })
 );
+// in the model you can add a function to create
+router.post('/watchlist/:watchlistId/coin/:coinId',asyncHandler(async function (req, res){
+  const watchlist_id = req.params.watchlistId;
+  const listAssets_id = req.params.coinId;
+  await WatchlistAsset.create({watchlist_id,listAssets_id} )
+}))
 
-router.delete('/watchlist/:id',asyncHandler(async function (req, res){
-  
+// TO TEST
+// window.csrfFetch('/api/dashboard/watchlist/1/coin/3', {
+//   method: 'POST',
+//   body: JSON.stringify({ listAsset_id: 3, watchlist_id: 1})
+// }).then(res => res.json()).then(data => console.log(data));
+
+
+router.delete('/watchlist/:id/coin/:id',asyncHandler(async function (req, res){
+
 }))
 
 /////////WATCHLIST////////////
