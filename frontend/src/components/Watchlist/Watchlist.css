@@ -14,13 +14,14 @@
   top: calc(var(--rh-fixed-header-height, 64px) + 31px);
   width: 323.77778px;
   box-sizing: inherit;
+ 
 }
 
 .watchlist_items {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow: hidden;
   box-sizing: content-box; /* So the width will be 100% + 17px */
   overflow-y: visible;

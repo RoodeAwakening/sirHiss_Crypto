@@ -12,6 +12,9 @@ function Coins() {
       return asset.coinCode;
     })
   );
+
+
+  
   // add coins
   // get watchlist id
   const wholeList = useSelector((state) => {
@@ -35,11 +38,12 @@ function Coins() {
 
   const [coinId, setCoinId] = useState("");
 
-  console.log(watchlistGetId, "------on the dispatch------");
+  console.log(watchlistGetId, "------on the dispatch------")
+  ;
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(postAddWatchlist(watchlistGetId, coinId));
-  }, [dispatch, ,coinId,length]);
+  }, [dispatch,coinId,length]);
 
   // ABOVE
   const coins = useSelector((state) => {
