@@ -44,7 +44,7 @@ router.post('/watchlist/:watchlistId/coin/:coinId',asyncHandler(async function (
 // }).then(res => res.json()).then(data => console.log(data));
 
 
-router.delete('/watchlist/:id/coin/:id',asyncHandler(async function (req, res){
+router.delete('/watchlist/:watchlistId/coin/:coinId',asyncHandler(async function (req, res){
 
 }))
 

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
-import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getWatchlist } from "../../store/watchlist";
 
 import Watchlist from "../Watchlist";
 import User from "../User";
@@ -14,6 +15,11 @@ import "./Dashboard.css";
 
 function Dashboard() {
   const sessionUser = useSelector((state) => state.session.user);
+
+
+
+
+
   if (!sessionUser) {
     return <Redirect to="/login" />;
   }
@@ -21,10 +27,8 @@ function Dashboard() {
   return (
     <div className="dashboard_container">
       <div className="dashboard_left">
-
         <User user={sessionUser} />
         <DashboardChart />
-        
         <Coins />
         <News />
       </div>
@@ -33,7 +37,7 @@ function Dashboard() {
           <Watchlist user={sessionUser} />
         </div>
       </div>
-      
+
       <div className="splash_footer"></div>
     </div>
   );

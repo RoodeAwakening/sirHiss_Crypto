@@ -8,31 +8,38 @@ import "./Coins.css";
 function Coins() {
   // get coins for the star button
   const watchlistAsset = useSelector((state) =>
-  state?.watchlist?.watchlist?.[0]?.ListAssets.map((asset) => {
-    return asset.coinCode;
-  })
-  )
-  
-  
+    state?.watchlist?.watchlist?.[0]?.ListAssets.map((asset) => {
+      return asset.coinCode;
+    })
+  );
   // add coins
   // get watchlist id
-  const watchlistGetId = useSelector((state) =>{
-   return state?.watchlist?.watchlist?.[0]?.id})
+  const wholeList = useSelector((state) => {
+    let arr = [];
+    return state?.watchlist?.watchlist?.[0]?.ListAssets.map((asset) => {
+      return arr.push(asset);
+    });
+  });
 
- if (!watchlistGetId) {
-   console.log('CREATE A WATCHLIST ID',watchlistGetId);
-   // if watchlist id is not here we need to create a watchlist
-   // make the post request for a new watchlist and default it with btc
- }
+  const length = wholeList?.length;
 
-const [coinId, setCoinId] = useState('')
+  const watchlistGetId = useSelector((state) => {
+    return state?.watchlist?.watchlist?.[0]?.id;
+  });
 
-  const dispatch = useDispatch()
-  useEffect(()=>{
-    dispatch(postAddWatchlist(watchlistGetId,coinId))
-  },[dispatch,coinId])
+  if (!watchlistGetId) {
+    console.log("CREATE A WATCHLIST ID", watchlistGetId);
+    // if watchlist id is not here we need to create a watchlist
+    // make the post request for a new watchlist and default it with btc
+  }
 
+  const [coinId, setCoinId] = useState("");
 
+  console.log(watchlistGetId, "------on the dispatch------");
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(postAddWatchlist(watchlistGetId, coinId));
+  }, [dispatch, ,coinId,length]);
 
   // ABOVE
   const coins = useSelector((state) => {
@@ -40,13 +47,12 @@ const [coinId, setCoinId] = useState('')
       // console.log('---asset',asset);
       return (
         <ul key={asset.coinCode}>
-          <li >
+          <li>
             <div className="coins_left">
               <img src={asset.coinLogo} />
               <div className="coins_code">
                 <div id="coins_coin-CODE">{asset.coinCode}</div>
                 <div id="coins_coin-NAME">{asset.coinName}</div>
-               
               </div>
             </div>
             <div className="coins_right">
@@ -57,7 +63,11 @@ const [coinId, setCoinId] = useState('')
                   className="fa fa-star checked"
                 ></button>
               ) : (
-                <button className="fav_add" className="fa fa-star unChecked " onClick={(e)=>setCoinId(asset.id) }></button>
+                <button
+                  className="fav_add"
+                  className="fa fa-star unChecked "
+                  onClick={(e) => setCoinId(asset.id)}
+                ></button>
               )}
             </div>
           </li>
