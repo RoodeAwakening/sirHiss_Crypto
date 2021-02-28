@@ -13,8 +13,6 @@ function Coins() {
     })
   );
 
-
-  
   // add coins
   // get watchlist id
   const wholeList = useSelector((state) => {
@@ -38,12 +36,13 @@ function Coins() {
 
   const [coinId, setCoinId] = useState("");
 
-  console.log(watchlistGetId, "------on the dispatch------")
-  ;
+  console.log(watchlistGetId, "------on the dispatch------");
+
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(postAddWatchlist(watchlistGetId, coinId));
-  }, [dispatch,coinId,length]);
+
+  const addToWatchlist = (e) => {
+    dispatch(postAddWatchlist(watchlistGetId, e.target.value));
+  };
 
   // ABOVE
   const coins = useSelector((state) => {
@@ -63,14 +62,16 @@ function Coins() {
               ${asset.coinCurrentPrice}
               {watchlistAsset?.includes(asset.coinCode) ? (
                 <button
+                  value={asset.id}
                   className="fav_remove"
                   className="fa fa-star checked"
                 ></button>
               ) : (
                 <button
+                  value={asset.id}
                   className="fav_add"
                   className="fa fa-star unChecked "
-                  onClick={(e) => setCoinId(asset.id)}
+                  onClick={addToWatchlist}
                 ></button>
               )}
             </div>
