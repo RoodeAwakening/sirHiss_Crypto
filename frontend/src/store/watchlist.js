@@ -1,3 +1,5 @@
+import { csrfFetch } from "./csrf";
+
 const SET_WATCHLIST = "watchlist/SET_WATCHLIST";
 const REMOVE_WATCHLIST = "watchlist/REMOVE_WATCHLIST";
 const ADD_WATCHLIST = "watchlist/ADD_WATCHLIST";
@@ -18,9 +20,10 @@ const removeWatchlist = (itemId) => {
 };
 
 //action creator - add to watchlist
-const addWatchlist = (itemId) => {
+const addWatchlist = (coinId) => {
   return {
     trype: ADD_WATCHLIST,
+    payload:coinId,
   };
 };
 
@@ -35,12 +38,14 @@ export const getWatchlist = (userId) => async (dispatch) => {
 
   dispatch(setWatchlist(watchlist));
 };
+
 // add to watchlist
-export const getAddWatchlist = (coin) => async (dispatch) => {
-  const {coinId} = coin
-  const response = await ('/api/dashboard/watchlist',{
+export const postAddWatchlist = (watchlistGetId,coinId) => async (dispatch) => {
+  
+  const response = await csrfFetch(`/api/dashboard/watchlist/${watchlistGetId}/coin/${coinId}`,{
     method: "POST",
     body: JSON.stringify({
+      watchlistGetId,
       coinId
     })
   })
@@ -50,8 +55,8 @@ export const getAddWatchlist = (coin) => async (dispatch) => {
 }
 
 // remove from watchlist
-export const getRemoveWatchlist = () => async (dispatch) => {
-  const response = await ("/api/dashboard/watchlist",
+export const getRemoveWatchlist = (watchlistId,coinId) => async (dispatch) => {
+  const response = await (`/api/dashboard/watchlist/${watchlistId}/coin/${coinId}`,
   {
     method: "DELETE",
   });
@@ -60,25 +65,32 @@ export const getRemoveWatchlist = () => async (dispatch) => {
 };
 //-----------------------------------
 //reducer
+export default function watchlistReducer(state = { watchlist: null }, action) {
+   switch(action.type){
+    case SET_WATCHLIST:
+      return {...state,watchlist:action.payload}
+    case ADD_WATCHLIST:
+      return {...state,watchlist:action.payload}
+
+
+
+    default:
+      return state;
+  }
+
+// THIS IS THE NEW ONE I WAS THINKING MIGHT WORK TO STORE STATE
 // export default function watchlistReducer(state = { watchlist: null }, action) {
 //   let newState;
-//   switch(action.type){
+//   switch (action.type) {
 //     case SET_WATCHLIST:
-//       return {...state,watchlist:action.payload}
-//       case REMOVE_ITEM:
+//       newState = Object.assign({}, state);
+//       newState.watchlist = action.payload;
+//       //console.log('newstate',newState.watchlist.[0].ListAssets);
+//       return newState;
 //     default:
 //       return state;
 //   }
 
-export default function watchlistReducer(state = { watchlist: null }, action) {
-  let newState;
-  switch (action.type) {
-    case SET_WATCHLIST:
-      newState = Object.assign({}, state);
-      newState.watchlist = action.payload;
-      //console.log('newstate',newState.watchlist.[0].ListAssets);
-      return newState;
-    default:
-      return state;
-  }
+
+
 }

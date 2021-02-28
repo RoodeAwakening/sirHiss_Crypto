@@ -50,12 +50,12 @@ function Navigation({ isLoaded }) {
             <ul className="nav_general-links">
               <li>
                 <h1>
-                  Products <i class="fas fa-chevron-down"></i>{" "}
+                  Products <i className="fas fa-chevron-down"></i>{" "}
                 </h1>
               </li>
               <li>
                 <h1>
-                  Learn <i class="fas fa-chevron-down"></i>
+                  Learn <i className="fas fa-chevron-down"></i>
                 </h1>
               </li>
               <li>
@@ -63,7 +63,7 @@ function Navigation({ isLoaded }) {
               </li>
               <li>
                 <h1>
-                  Who we are <i class="fas fa-chevron-down"></i>
+                  Who we are <i className="fas fa-chevron-down"></i>
                 </h1>
               </li>
             </ul>
