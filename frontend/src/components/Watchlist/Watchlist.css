@@ -43,6 +43,16 @@ align-items: center;
 
   .add_remove{
     padding-left: 10px;
+    
+  }
+
+  .watchlist_right
+  button, input[type="submit"]{
+    background: none;
+    border: none;
+    padding-left: 10px;
+    cursor: pointer;
+    outline: inherit;
   }
 
 .watchlist_asset{

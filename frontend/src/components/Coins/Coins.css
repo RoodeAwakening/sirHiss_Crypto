@@ -57,6 +57,16 @@ align-items: center;
   
 }
 
+.coins_each
+
+button, input[type="submit"]{
+  background: none;
+  border: none;
+  padding-left: 10px;
+  cursor: pointer;
+  outline: inherit;
+}
+
 .coins_items li{
   display: flex;
   justify-content: center;
