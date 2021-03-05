@@ -40,8 +40,8 @@
 }
 
 .news_title {
-  font-family: "Capsule Sans Text", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
+  /* font-family: "Capsule Sans Text", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif; */
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -50,8 +50,8 @@
 }
 
 .news_content {
-  font-family: "Capsule Sans Display", system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  /* font-family: "Capsule Sans Display", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; */
   font-size: 24px;
   font-style: normal;
   font-weight: 500;

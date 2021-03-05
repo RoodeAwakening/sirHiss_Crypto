@@ -1,89 +1,161 @@
-.signup_wrapper{
-display: flex;
-
+.signup_wrapper {
+  display: flex;
+  height: calc(var(--rh-fixed-header-height, 100vh) - 64px);
 }
 
-.signup_left{
-width: 70%;
+/* left side */
+
+.signup_left {
+  width: 70%;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.signup_left h1 {
+  margin: 0px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.25px;
+  padding-top: 30px;
+}
+.signup_left h2 {
+  margin: 0px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: -0.25px;
+}
+.signup_left h3 {
+  margin: 0px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.25px;
+  padding-bottom: 10px;
+  padding-top: 30px;
 }
 
 .signup_Body {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100vw;
-  background-color: blue;
 }
 
 .signup_Form_Container {
   display: flex;
   align-items: center;
-  background-color: rebeccapurple;
   padding: 10px;
   height: fit-content;
-  margin-top: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup_Form {
-  background-color: red;
-  border: 3px solid green;
+  padding-left: 0;
+  margin-left: 0;
   align-items: center;
   text-align: center;
   height: auto;
-  
+  width: 100%;
+}
+
+.signup_Form input {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(198, 217, 250) ;
 }
 
 #signup_Email {
   display: flex;
-  background-color: green;
-  padding: 5px;
-  margin: 10px;
+  padding: 10px;
+  margin: 10px 2.5%;
   text-align: center;
-  
+}
+
+#signup_firstName {
+  display: inline-block;
+  padding: 10px 5px;
+  margin: 10px;
+  width: 45%;
+}
+
+#signup_lastName {
+  display: inline-block;
+  padding: 10px 5px;
+  margin: 10px;
+  width: 45%;
 }
 
 #signup_Username {
   display: flex;
-  background-color: orange;
-  padding: 5px;
-  margin: 10px;
-}
-#signup_firstName {
-  display: flex;
-  background-color: orange;
-  padding: 5px;
-  margin: 10px;
-}
-#signup_lastName {
-  display: flex;
-  background-color: orange;
-  padding: 5px;
-  margin: 10px;
+  padding: 10px;
+  margin: 10px 2.5%;
+  text-align: center;
 }
 
 #signup_Password {
-  display: flex;
-  background-color: orange;
-  padding: 5px;
+  display: inline-block;
+  padding: 10px 5px;
   margin: 10px;
+  width: 45%;
 }
 
 #signup_Confirm_Password {
-  display: flex;
-  background-color: orange;
-  padding: 5px;
+  display: inline-block;
+  padding: 10px 5px;
   margin: 10px;
+  width: 45%;
 }
 
 #signup_Button {
-  background-color: blue;
   padding: 8px;
   border-radius: 30px;
   width: 75%;
   margin: 10px;
 }
 
-.signup_right{
+.signup_left h4 {
+  color: rgb(180, 189, 194);
+  font-size: 12.75px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+/* right side */
+
+.signup_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30%;
-  background-color: red;
+  background-color: rgb(245, 248, 250);
+}
+
+.signup_right ul {
+  width: 70%;
+}
+
+.signup_right h1 {
+  margin: 0px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.25px;
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+.signup_right h2 {
+  margin: 0px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: -0.25px;
 }

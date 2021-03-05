@@ -44,6 +44,14 @@ function SignupFormPage() {
   return (
     <div className="signup_wrapper">
       <div className="signup_left">
+        <h1>Make Your Money Move</h1>
+        <h2>
+          Robinhood lets you invest in companies you love, commission-free.
+        </h2>
+        <h3>
+          Please enter your full legal name. Your legal name should match any
+          form of government ID.
+        </h3>
         <div className="signup_Body">
           <div className="signup_Form_Container">
             <form className="signup_Form" onSubmit={handleSubmit}>
@@ -52,24 +60,6 @@ function SignupFormPage() {
                   <li key={idx}>{error}</li>
                 ))}
               </ul>
-              <label id="signup_Email">
-                Email
-                <input
-                  type="text"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </label>
-              <label id="signup_Username">
-                Username
-                <input
-                  type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required
-                />
-              </label>
               <label id="signup_firstName">
                 <input
                   type="text"
@@ -88,19 +78,37 @@ function SignupFormPage() {
                   required
                 />
               </label>
+              <label id="signup_Email">
+                <input
+                  type="text"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </label>
+              <label id="signup_Username">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                />
+              </label>
               <label id="signup_Password">
-                Password
                 <input
                   type="password"
+                  placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
               </label>
               <label id="signup_Confirm_Password">
-                Confirm Password
                 <input
                   type="password"
+                  placeholder="Confirm Password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   required
@@ -112,6 +120,19 @@ function SignupFormPage() {
             </form>
           </div>
         </div>
+        <h4>
+          All investments involve risk, including the possible loss of
+          principal. Investors should consider their investment objectives and
+          risks carefully before investing.
+        </h4>
+        <h4>
+          Commission-free trading means $0 commission trading on self-directed
+          individual cash or margin brokerage accounts that trade U.S. listed
+          securities via mobile devices or web. Keep in mind, other fees such as
+          trading (non-commission) fees, Gold subscription fees, wire transfer
+          fees, and paper statement fees may apply to your brokerage account.
+          Please see SirHiss's fee schedule to learn more.
+        </h4>
       </div>
       <div className="signup_right">
         <div>

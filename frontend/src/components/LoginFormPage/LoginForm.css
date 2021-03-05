@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: calc(var(--rh-fixed-header-height, 100vh) - 64px);
 }
 
 .login_left {
@@ -46,8 +46,8 @@
 }
 
 #login_header {
-  font-family: "Capsule Sans Text", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
+  /* font-family: "Capsule Sans Text", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif; */
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -55,8 +55,8 @@
 }
 .login_text {
   text-align: left;
-  font-family: "Capsule Sans Display", system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  /* font-family: "Capsule Sans Display", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; */
   font-size: 13px;
   font-style: normal;
   font-weight: 400;

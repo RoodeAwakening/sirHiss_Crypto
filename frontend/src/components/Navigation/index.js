@@ -20,6 +20,8 @@ function Navigation({ isLoaded }) {
       </NavLink>
     );
   } else {
+
+
     sessionLinks = (
       <>
         <NavLink to="/login" id="nav_login-btn">

@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
@@ -17,7 +18,7 @@ import News from "./components/News";
 
 
 
-function App() {
+function App({location}) {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
 
