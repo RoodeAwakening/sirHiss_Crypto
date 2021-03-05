@@ -91,11 +91,7 @@ button, input[type="submit"]{
   padding-left: 10px;
 }
 
-.splash_footer{
-  margin-top: 115px;
-  height: 95px;
-  background-color: black;
-}
+
 
 .coins_items img{
   display: flex;

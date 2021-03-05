@@ -29,14 +29,13 @@ function SplashPage() {
         <div className="splash_signup-video-container">
           <div className="splash_signup-video">
             <div>
-
-            <video
-              src="https://f000.backblazeb2.com/file/sirhiss/splashSignupVideo.mp4"
-              autoPlay
-              loop
-              muted
+              <video
+                src="https://f000.backblazeb2.com/file/sirhiss/splashSignupVideo.mp4"
+                autoPlay
+                loop
+                muted
               />
-              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -55,6 +54,7 @@ function SplashPage() {
         <div className="splash_middle-1_trading-blurb-container">
           <div className="splash_trading-blurb">
             <div>
+              
               <h1>We are all investors.</h1>
               <h3>
                 So are you. <i class="fas fa-arrow-circle-right"></i>

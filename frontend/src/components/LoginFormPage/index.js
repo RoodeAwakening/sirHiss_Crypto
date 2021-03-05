@@ -11,10 +11,11 @@ function LoginFormPage() {
 
   const sessionUser = useSelector((state) => state.session.user);
 
-  const [credential, setCredential] = useState("");
-  const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState([]);
+  let [credential, setCredential] = useState("");
+  let [password, setPassword] = useState("");
 
+  const [errors, setErrors] = useState([]);
+  console.log("credential-", credential);
   if (sessionUser) return <Redirect to="/dashboard" />;
 
   const handleSubmit = (e) => {
@@ -27,6 +28,14 @@ function LoginFormPage() {
       }
     );
   };
+
+  const setDemoLogin = (e) => {
+    e.preventDefault();
+    credential = "Demo-lition";
+    password = "password";
+    return dispatch(sessionActions.login({ credential, password }));
+  };
+
   return (
     <div className="login_Body">
       <div className="login_left">
@@ -37,6 +46,7 @@ function LoginFormPage() {
 
       <div className="login_right">
         <div className="login_Form_Container">
+          <div>
           <form className="login_Form" onSubmit={handleSubmit}>
             <ul>
               {errors.map((error, idx) => (
@@ -68,11 +78,14 @@ function LoginFormPage() {
               Sign In
             </button>
           </form>
-                <div>
-          <h4>Demo login </h4>
-          <h4>Username: Demo-lition </h4>
-          <h4>Password: password</h4>
-                </div>
+          {/* ------------------- */}
+          
+          <form onSubmit={setDemoLogin}>
+            <button type="submit" id="login_Button-demo">
+              Demo Login
+            </button>
+          </form>
+          </div>
         </div>
       </div>
     </div>

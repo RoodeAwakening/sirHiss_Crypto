@@ -7,6 +7,7 @@ import configureStore from "./store";
 import { restoreCSRF, csrfFetch } from "./store/csrf";
 import * as sessionActions from './store/session'
 import "./index.css";
+import Navigation from "./components/Navigation";
 
 const store = configureStore();
 

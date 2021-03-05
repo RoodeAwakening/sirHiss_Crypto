@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: calc(var(--rh-fixed-header-height, 100vh) - 64px);
 }
 
 .login_left {
@@ -46,8 +46,8 @@
 }
 
 #login_header {
-  font-family: "Capsule Sans Text", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
+  /* font-family: "Capsule Sans Text", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif; */
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -55,8 +55,8 @@
 }
 .login_text {
   text-align: left;
-  font-family: "Capsule Sans Display", system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  /* font-family: "Capsule Sans Display", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; */
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -85,6 +85,27 @@
   margin-top: 75px;
   margin-right: 20px;
   padding: 0 48px;
+  justify-content: center;
+  min-width: 90px;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.1px;
+  line-height: 20px;
+  color: white;
+}
+
+#login_Button-demo{
+  display: flex;
+  background-color: rgb(0, 200, 5);
+  height: 48px;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-right: 20px;
+  padding: 0 32px;
   justify-content: center;
   min-width: 90px;
   white-space: nowrap;
