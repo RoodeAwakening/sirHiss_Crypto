@@ -88,11 +88,7 @@ align-items: center;
 
 }
 
-.splash_footer{
-  margin-top: 115px;
-  height: 95px;
-  background-color: black;
-}
+
 
 .watchlist_items img{
   display: flex;

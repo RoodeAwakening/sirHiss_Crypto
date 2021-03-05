@@ -113,11 +113,25 @@
   width: 45%;
 }
 
+.signup_button-container{
+  display: flex;
+  margin-left: 23.016px;
+  padding-left: 10px;
+  
+}
+
 #signup_Button {
-  padding: 8px;
-  border-radius: 30px;
-  width: 75%;
-  margin: 10px;
+  margin: 0;
+  color: white;
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  white-space: nowrap;
+  padding: 0px 45px;
+  height: 48px;
+  min-width: 144px;
+  border-radius: 8px;
+  background-color: rgb(0, 200, 5);
 }
 
 .signup_left h4 {
