@@ -2,19 +2,31 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCoins } from "../../store/coins";
 import { postAddWatchlist } from "../../store/watchlist";
+import { deleteRemoveWatchlist } from "../../store/watchlist";
+import { getWatchlist} from "../../store/watchlist";
+
 
 import "./Coins.css";
 
 function Coins() {
+ 
+
+  //get user id
+  const sessionuser = useSelector((state) => state.session.user);
+  const userId = sessionuser.id;
+
   // get coins for the star button
-  const watchlistAsset = useSelector((state) =>
+    const watchlistAsset = useSelector((state) =>
     state?.watchlist?.watchlist?.[0]?.ListAssets.map((asset) => {
       return asset.coinCode;
     })
   );
 
   // add coins
-  // get watchlist id
+  // get watchlist idwatchlistGetId
+
+  // WATCHLST LENGTH
+  
   const wholeList = useSelector((state) => {
     let arr = [];
     return state?.watchlist?.watchlist?.[0]?.ListAssets.map((asset) => {
@@ -36,13 +48,23 @@ function Coins() {
 
   const [coinId, setCoinId] = useState("");
 
-  console.log(watchlistGetId, "------on the dispatch------");
-
   const dispatch = useDispatch();
 
+  
   const addToWatchlist = (e) => {
     dispatch(postAddWatchlist(watchlistGetId, e.target.value));
   };
+
+  // DELETE FROM WATCHLIST
+  const removeFromWatchlist = (e) => {
+    dispatch(deleteRemoveWatchlist(userId, e.target.value));
+  };
+
+    // GET THE WATCHLIST
+      console.log('watchlistLength',length);
+    useEffect(() => {
+      dispatch(getWatchlist(userId));
+    }, [dispatch,length]);
 
   // ABOVE
   const coins = useSelector((state) => {
@@ -65,6 +87,7 @@ function Coins() {
                   value={asset.id}
                   className="fav_remove"
                   className="fa fa-star checked"
+                  onClick={removeFromWatchlist}
                 ></button>
               ) : (
                 <button

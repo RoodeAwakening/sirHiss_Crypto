@@ -13,16 +13,16 @@ const setWatchlist = (watchlist) => {
 };
 
 //action creator - delete from watchlist
-const removeWatchlist = (itemId) => {
+const removeWatchlist = () => {
   return {
-    trype: REMOVE_WATCHLIST,
+    type: REMOVE_WATCHLIST,
   };
 };
 
 //action creator - add to watchlist
 const addWatchlist = (coinId) => {
   return {
-    trype: ADD_WATCHLIST,
+    type: ADD_WATCHLIST,
     payload: coinId,
   };
 };
@@ -36,14 +36,13 @@ export const getWatchlist = (userId) => async (dispatch) => {
   const watchlist = await response.json();
 
   dispatch(setWatchlist(watchlist));
+  return response;
 };
 
 // add to watchlist
 export const postAddWatchlist = (watchlistGetId, coinId) => async (
   dispatch
 ) => {
-  console.log(watchlistGetId, coinId, "store1");
-
   const response = await csrfFetch(
     `/api/dashboard/watchlist/${watchlistGetId}/coin/${coinId}`,
     {
@@ -54,19 +53,21 @@ export const postAddWatchlist = (watchlistGetId, coinId) => async (
       }),
     }
   );
-  console.log(watchlistGetId, coinId, "store2");
   const data = await response.json();
-  console.log(watchlistGetId, coinId, "store3");
-  dispatch(addWatchlist(data.coinId));
+  dispatch(addWatchlist(data.listAssets_id));
   return response;
 };
 
 // remove from watchlist
-export const getRemoveWatchlist = (watchlistId, coinId) => async (dispatch) => {
-  const response = await (`/api/dashboard/watchlist/${watchlistId}/coin/${coinId}`,
-  {
-    method: "DELETE",
-  });
+export const deleteRemoveWatchlist = (watchlistId, coinId) => async (
+  dispatch
+) => {
+  const response = await csrfFetch(
+    `/api/dashboard/watchlist/${watchlistId}/coin/${coinId}`,
+    {
+      method: "DELETE",
+    }
+  );
   dispatch(removeWatchlist());
   return response;
 };
@@ -77,6 +78,8 @@ export default function watchlistReducer(state = { watchlist: null }, action) {
     case SET_WATCHLIST:
       return { ...state, watchlist: action.payload };
     case ADD_WATCHLIST:
+      return { ...state, watchlist: action.payload };
+    case REMOVE_WATCHLIST:
       return { ...state, watchlist: action.payload };
 
     default:

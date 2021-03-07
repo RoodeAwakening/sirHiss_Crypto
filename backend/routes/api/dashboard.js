@@ -30,23 +30,34 @@ router.get(
     return res.json(watchlistArr);
   })
 );
+
+// ADD TO WATCHLIST
 // in the model you can add a function to create
 router.post('/watchlist/:watchlistId/coin/:coinId',asyncHandler(async function (req, res){
   const watchlist_id = req.params.watchlistId;
   const listAssets_id = req.params.coinId;
-  await WatchlistAsset.create({watchlist_id,listAssets_id} )
+  const coin = await WatchlistAsset.create({watchlist_id,listAssets_id} )
+  return res.json(coin);
 }))
+
+// REMOVE FROM WATCHLIST
+router.delete('/watchlist/:watchlistId/coin/:coinId',asyncHandler(async function (req, res){
+  const watchlist_id = req.params.watchlistId;
+  const listAssets_id = req.params.coinId;
+  await WatchlistAsset.destroy({ where: { listAssets_id: listAssets_id, watchlist_id: watchlist_id }});
+  return res.json({ listAssets_id, watchlist_id });
+}))
+
+
 
 // TO TEST
 // window.csrfFetch('/api/dashboard/watchlist/1/coin/3', {
-//   method: 'POST',
-//   body: JSON.stringify({ listAsset_id: 3, watchlist_id: 1})
+//   method: 'DELETE',
+//   body: JSON.stringify({ listAsset_id: 1, watchlist_id: 1})
 // }).then(res => res.json()).then(data => console.log(data));
 
 
-router.delete('/watchlist/:watchlistId/coin/:coinId',asyncHandler(async function (req, res){
 
-}))
 
 /////////WATCHLIST////////////
 
